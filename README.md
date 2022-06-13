@@ -1,3 +1,13 @@
+# Projekt-Omega 
+
+Projekt-Omega ist ein 2d Scroll Shoter im Stiel von R-Type. Du bist alleine mit deinen Raumschiff Omega und kämpfst in einer Dystopischen Welt voller feindlichen Gegnern ums überleben. Während am Anfang noch eine Überschaubare Anzahl an Gegnern versuchen dir das Licht auszuknipsen kommen nach und nach eine Invasion von Feindlichen Flug Objekten dazu und machen dir das Leben zur Hölle. Messe dich mit anderen Spielern um die Höchste Punktzahl  verewige dich in der Higscore und werde der Ultimative Retter des Universums.
+
+
+
+
+
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
