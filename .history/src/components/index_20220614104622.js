@@ -14,7 +14,7 @@ let rocket = {
   y: 200,
   width: 100,
   height: 50,
-  src: "img/ufo1.png",
+  src: "/src/media/ufo1.png",
 };
 
 let ufos = [];
@@ -132,7 +132,7 @@ function checkForCollion() {
       rocket.x < ufo.x &&
       rocket.y < ufo.y + ufo.height
     ) {
-      rocket.img.src = "img/boom3.png";
+      rocket.img.src = "/src/media/rocket1.png";
       console.log("Collion!!!");
       ufos = ufos.filter((u) => u != ufo);
     }
@@ -146,7 +146,7 @@ function checkForCollion() {
         shot.y < ufo.y + ufo.height
       ) {
         ufo.hit = true;
-        ufo.img.src = "img/boom3.png";
+        ufo.img.src = "/src/media/boom3.png";
         console.log("Collion!!!");
 
         setTimeout(() => {
@@ -163,7 +163,7 @@ function createUfos() {
     y: Math.random() * 500, // Wir platzieren unsere UFOs an einem zufälligen Ort
     width: 100,
     height: 40,
-    src: "img/sat.png",
+    src: "/src/media/sat.png",
     img: new Image(),
   };
   ufo.img.src = ufo.src; // Ufo-Bild wird geladen.
