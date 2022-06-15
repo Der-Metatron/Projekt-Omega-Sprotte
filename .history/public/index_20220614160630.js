@@ -205,7 +205,7 @@ function update() {
 }
 
 function loadImages() {
-  backgroundImage.src = "img/- WALLPAPER - (276).jpg";
+  backgroundImage.src = "img/back1.jpg";
   rocket.img = new Image();
   rocket.img.src = rocket.src;
 }
@@ -215,7 +215,7 @@ function draw() {
   ctx.drawImage(rocket.img, rocket.x, rocket.y, rocket.width, rocket.height);
 
   ufos.forEach(function (ufo) {
-    ctx.drawImage(ufo.img, ufo.x, ufo.y, ufo.width, ufo.height);
+    ctx.drawImage(ufo.img, ufo.x, ufo.y, ufo.z, ufo.width, ufo.height);
   });
 
   shots.forEach(function (shot) {
