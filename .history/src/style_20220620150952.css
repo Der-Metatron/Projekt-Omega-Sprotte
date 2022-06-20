@@ -1,5 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Open+Sans&display=swap");
-
+@import url("https://fonts.googleapis.com/css?family=Poppins:900i");
 body {
   margin: 0;
   background-color: #000;
@@ -149,7 +149,7 @@ footer {
   position: absolute;
   z-index: 10;
 }
-/*  */
+/*  
 button {
   display: inline-block;
   margin: 20px;
@@ -166,3 +166,4 @@ button:hover {
   padding: 5px 25px 5px 10px;
   border-radius: 5px 25px 25px 5px;
 }
+*/

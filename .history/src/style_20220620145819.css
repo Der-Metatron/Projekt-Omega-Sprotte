@@ -149,13 +149,13 @@ footer {
   position: absolute;
   z-index: 10;
 }
-/*  */
+
 button {
   display: inline-block;
   margin: 20px;
   text-decoration: none;
   font-family: Arial;
-  font-size: 20px;
+  font-size: 16px;
   border: 1px solid #56ae00;
   border-radius: 25px 5px 5px 25px;
   background-color: #aae472;
