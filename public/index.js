@@ -133,6 +133,7 @@ function checkForCollion() {
       rocket.img.src = "img/boom3.png";
       console.log("Collion!!!");
       ufos = ufos.filter((u) => u != ufo);
+      window.location.reload(true); //das sorgt dafür das sich die seite neu lädt wen man stirbt
     }
 
     shots.forEach(function (shot) {
@@ -183,14 +184,21 @@ function checkForShoot() {
     shots.push(shot);
   }
 }
-
+//rechts und links vergessen in update zu codieren
 function update() {
   if (KEY_UP) {
-    rocket.y -= 5;
+    rocket.y -= 10;
   }
 
   if (KEY_DOWN) {
-    rocket.y += 5;
+    rocket.y += 10;
+  }
+  if (KEY_LEFT) {
+    rocket.x -= 10;
+  }
+
+  if (KEY_RIGHT) {
+    rocket.x += 10;
   }
 
   ufos.forEach(function (ufo) {
