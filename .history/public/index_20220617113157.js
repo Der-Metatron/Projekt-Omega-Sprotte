@@ -12,7 +12,7 @@ let rocket = {
   y: 200,
   width: 100,
   height: 50,
-  src: "img/ufo1.png",
+  src: "img/spaceship-g2c5115d52_1280.png",
 };
 
 let ufos = [];
@@ -44,7 +44,7 @@ document.onkeydown = function (e) {
 document.onkeyleft = function (e) {
   if (e.keyCode == 37) {
     // Leertaste gedrückt
-    KEY_LEFT = true;
+    KEY_SPACE = true;
   }
 
   if (e.keyCode == 38) {

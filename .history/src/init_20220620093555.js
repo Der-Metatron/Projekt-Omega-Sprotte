@@ -1,6 +1,5 @@
 /* Musik */
 
-/* ------------------------------------------------------------- */
 const stars = 400;
 
 for (let i = 0; i < stars; i++) {
@@ -19,4 +18,3 @@ function randomPosition() {
   let randomY = Math.floor(Math.random() * y);
   return [randomX, randomY];
 }
-/* Button */

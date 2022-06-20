@@ -7,15 +7,18 @@
     <title>Projekt-Omega</title>
     <link href="style.css" rel="stylesheet" />
   </head>
-
   <body>
-    <!-- Musik -->
-    <audio autoplay>
-      <source src="intro.mp3" type="audio/mpeg" />
+    <audio
+      id="audio_with_controls"
+      controls
+      src="/public/audio/suspense-intro-track.mp3"
+      type="audio/mp3"
+    >
+      Ihr Browser kann dieses Tondokument nicht wiedergeben.<br />
+      Es enthält eine Aufführung der Europahymne. Sie können es unter
+      <a href="/public/audio/suspense-intro-track.mp3">diesem Link</a>
+      abrufen.
     </audio>
-
-    <!-- Erste Inro laufschrift -->
-
     <section class="intro">
       In einer Zeit bei DCI mit einer kleinen aufstrebenden Programmier
       Gruppe...................
@@ -51,10 +54,9 @@
           gelegenheit gegeben haben unser Ideen zu verwirklichen. Und jetzt viel
           Spaß beim Zocken!!!
         </p>
-        <button class="button" type="button" id="button">Start Game!</button>
+        <button>Next</button>
       </div>
     </div>
-
     <script src="init.js"></script>
   </body>
 </html>

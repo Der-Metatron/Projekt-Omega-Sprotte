@@ -145,7 +145,11 @@ p {
   font-size: 3.5rem;
 }
 
+.footer {
+  color: #ffe81f;
+}
+
 .button {
-  color: rgb(0, 136, 255);
+  color: aliceblue;
   font-size: 5rem;
 }

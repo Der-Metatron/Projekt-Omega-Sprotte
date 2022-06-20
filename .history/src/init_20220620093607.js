@@ -19,4 +19,3 @@ function randomPosition() {
   let randomY = Math.floor(Math.random() * y);
   return [randomX, randomY];
 }
-/* Button */

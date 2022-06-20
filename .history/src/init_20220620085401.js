@@ -1,6 +1,7 @@
 /* Musik */
-
-/* ------------------------------------------------------------- */
+<script type="text/javascript">
+  let audio = new Audio('/public/audio/suspense-intro-track.mp3'); audio.play();
+</script>;
 const stars = 400;
 
 for (let i = 0; i < stars; i++) {
@@ -19,4 +20,3 @@ function randomPosition() {
   let randomY = Math.floor(Math.random() * y);
   return [randomX, randomY];
 }
-/* Button */

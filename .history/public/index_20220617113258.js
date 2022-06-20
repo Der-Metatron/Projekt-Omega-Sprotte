@@ -44,7 +44,7 @@ document.onkeydown = function (e) {
 document.onkeyleft = function (e) {
   if (e.keyCode == 37) {
     // Leertaste gedrückt
-    KEY_LEFT = true;
+    KEY_SPACE = true;
   }
 
   if (e.keyCode == 38) {

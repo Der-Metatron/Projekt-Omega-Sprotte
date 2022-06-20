@@ -148,4 +148,6 @@ p {
 .button {
   color: rgb(0, 136, 255);
   font-size: 5rem;
+  position: absolute;
+  top: 100%;
 }

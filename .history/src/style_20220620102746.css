@@ -148,4 +148,5 @@ p {
 .button {
   color: rgb(0, 136, 255);
   font-size: 5rem;
+  align-items: center;
 }
