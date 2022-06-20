@@ -12,7 +12,7 @@ let rocket = {
   y: 200,
   width: 100,
   height: 50,
-  src: "img/ufo1.png",
+  src: "img/- WALLPAPER - (276).jpg",
 };
 
 let ufos = [];
@@ -213,7 +213,7 @@ function update() {
 }
 
 function loadImages() {
-  backgroundImage.src = "img/- WALLPAPER - (276).jpg";
+  backgroundImage.src = "img/back1.jpg";
   rocket.img = new Image();
   rocket.img.src = rocket.src;
 }

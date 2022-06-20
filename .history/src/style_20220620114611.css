@@ -3,7 +3,6 @@
 body {
   margin: 0;
   background-color: #000;
-  overflow: hidden !important;
 }
 
 body::after {
@@ -145,10 +144,6 @@ p {
   font-size: 3.5rem;
 }
 
-footer {
-  position: absolute;
-  z-index: 10;
-}
 button {
   color: rgb(0, 136, 255);
   font-size: 5rem;

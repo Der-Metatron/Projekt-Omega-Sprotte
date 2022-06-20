@@ -145,11 +145,7 @@ p {
   font-size: 3.5rem;
 }
 
-footer {
-  position: absolute;
-  z-index: 10;
-}
-button {
+#button {
   color: rgb(0, 136, 255);
   font-size: 5rem;
 }
