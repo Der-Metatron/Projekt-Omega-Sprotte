@@ -10,9 +10,15 @@
 
   <body>
     <!-- Musik -->
-    <audio autoplay>
-      <source src="intro.mp3" type="audio/mpeg" />
+
+    <audio id="Musik" autoplay>
+      <source
+        src="/public/audio/Musik/Projekt Omega cut.mp3"
+        type="audio/mp3"
+      />
     </audio>
+    <!-- Mutte Button in Js ------NICHT FERTIG -->
+    <a href="javascript:void(0);" onclick="toggleMute()">Mute/Unmute</a>
 
     <!-- Erste Inro laufschrift -->
 
@@ -33,17 +39,17 @@
           Dystopischen Welt voller feindlichen Gegnern ums überleben.Während des
           21.Jahrhundert befinden sich in der Umlaufbahn des Planeten Erde durch
           Umweltverschmutzung,zügelloser verbrauch der Ressourcen und
-          Machthungriger Politiker Unmengen an Weltraum Schrott,Satelliten und
+          Machthungriger Politiker Unmengen an Weltraum Schrott, Satelliten und
           Gruppen verschiedener Fraktionen die versuchen dir das Licht
           auszuknipsen dazu kommen nach und nach eine Invasion von Feindlichen
-          Flug Objekten dazu und machen dir das Leben zur Hölle.Messe dich mit
+          Flug Objekten dazu und machen dir das Leben zur Hölle. Messe dich mit
           anderen Spielern um die Höchste Punktzahl,verewige dich in der
           Highscore und werde der Ultimative Retter des Universums.
         </p>
         <p>
-          Idee: Der Metatron. Programming: Dennis, Serdar, Metatron. Musik &
-          Sound: Der Metatron. Grafik: Emergancy-Romm Tattoo, Pixbay. Fontend
-          Highscore: Dennis. Backend Highscore: Serdar.
+          Idee: Der Metatron. Programming: Der Metatron, Serdar, Dennis. Musik &
+          Sound: Der Metatron. Grafik: Emergancy-Romm Tattoo, Pixbay, Der
+          Metatron. Backend Highscore: Serdar & Dennis.
         </p>
         <p>Erstellt mit: Canvas, Html, Reackt, MongoDb, Express, Css.</p>
         <p>
@@ -55,9 +61,15 @@
     </div>
     <!-- Button mit localhost zum Start der Spiels. -->
     <footer>
-      <button onclick="window.location.href = 'http://localhost:3001/';">
+      <button onclick="window.location.href = 'http://localhost:3000/';">
         Start Game!
       </button>
+      <!-- Javascript damit der Start Button Sound hat.---Noch nicht oben implenentiert!!--- -->
+      <script type="text/javascript">
+        const audio = new Audio();
+        audio.src = "/audio/Arlarm.mp3";
+      </script>
+      <!-- ----------------------------------------------------------------------------------------- -->
     </footer>
     <script src="init.js"></script>
   </body>

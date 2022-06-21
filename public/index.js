@@ -7,6 +7,15 @@ let canvas;
 let ctx;
 let backgroundImage = new Image();
 
+/* Audio Web-Audio-API  */
+/*  
+<audio src="/public/audio/Musik/titel 1.mp3"></audio>;
+const audioContext = new AudioContext();
+const element = document.querySelector(audio);
+const source = audioContext.createMediaElementSource(element);
+source.connect(audioContext.destination);
+audio.play();
+*/
 let rocket = {
   x: 50,
   y: 200,
@@ -115,7 +124,7 @@ function startGame() {
   ctx = canvas.getContext("2d");
   loadImages();
   setInterval(update, 1000 / 25);
-  setInterval(createUfos, 5000);
+  setInterval(createUfos, 2000); /* Wie schnell Feinde kommen */
   setInterval(checkForCollion, 1000 / 25);
   setInterval(checkForShoot, 1000 / 10);
   draw();
@@ -163,6 +172,7 @@ function createUfos() {
     width: 100,
     height: 40,
     src: "img/sat.png",
+
     img: new Image(),
   };
   ufo.img.src = ufo.src; // Ufo-Bild wird geladen.

@@ -166,3 +166,10 @@ button:hover {
   padding: 5px 25px 5px 10px;
   border-radius: 5px 25px 25px 5px;
 }
+
+.button1 {
+  position: absolute;
+  z-index: 11;
+  float: right;
+  margin-left: 0.5em;
+}

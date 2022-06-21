@@ -1,5 +1,8 @@
 /* Musik */
-
+function toggleMute() {
+  let myAudio = document.getElementById("Musik");
+  myAudio.muted = !myAudio.muted;
+}
 /* ------------------------------------------------------------- */
 const stars = 400;
 
