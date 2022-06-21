@@ -74,47 +74,47 @@ document.onkeyleft = function (e) {
 };
 // Taste Rechts
 document.onkeyright = function (e) {
-  if (e.keyCode === 39) {
+  if (e.keyCode == 39) {
     // Leertaste gedrückt
     KEY_SPACE = true;
   }
 
-  if (e.keyCode === 38) {
+  if (e.keyCode == 38) {
     // Nach oben gedrückt
     KEY_UP = true;
   }
 
-  if (e.keyCode === 40) {
+  if (e.keyCode == 40) {
     // Nach unten gedrückt
     KEY_DOWN = true;
   }
-  if (e.keyCode === 37) {
+  if (e.keyCode == 37) {
     KEY_LEFT = true;
   }
-  if (e.keyCode === 39) {
+  if (e.keyCode == 39) {
     KEY_RIGHT = true;
   }
 };
 // Taste Oben
 document.onkeyup = function (e) {
-  if (e.keyCode === 32) {
+  if (e.keyCode == 32) {
     // Leertaste losgelassen
     KEY_SPACE = false;
   }
 
-  if (e.keyCode === 38) {
+  if (e.keyCode == 38) {
     // Nach oben losgelassen
     KEY_UP = false;
   }
 
-  if (e.keyCode === 40) {
+  if (e.keyCode == 40) {
     // Nach unten losgelassen
     KEY_DOWN = false;
   }
-  if (e.keyCode === 37) {
+  if (e.keyCode == 37) {
     KEY_LEFT = false;
   }
-  if (e.keyCode === 39) {
+  if (e.keyCode == 39) {
     KEY_RIGHT = false;
   }
 };
@@ -141,7 +141,7 @@ function checkForCollion() {
     ) {
       rocket.img.src = "img/boom3.png";
       console.log("Collion!!!");
-      ufos = ufos.filter((u) => u !== ufo);
+      ufos = ufos.filter((u) => u != ufo);
       window.location.reload(true); //das sorgt dafür das sich die seite neu lädt wen man stirbt
     }
 
@@ -158,7 +158,7 @@ function checkForCollion() {
         console.log("Collion!!!");
 
         setTimeout(() => {
-          ufos = ufos.filter((u) => u !== ufo);
+          ufos = ufos.filter((u) => u != ufo);
         }, 2000);
       }
     });
