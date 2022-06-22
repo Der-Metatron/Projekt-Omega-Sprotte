@@ -25,15 +25,13 @@ export const Canvas = () => {
         height="640"
       />
       <p>Score: {score}</p> {/* PunkteZahl im Canvas Zeigen */}
-      {/* Stopt das Game  */}
-      <button
+      <button /* Stopt das Game */
         onClick={() => {
           stopGame();
         }}
       >
         Stop
       </button>
-      {/* Weiter mit Game */}
       <button
         onClick={() => {
           continueGame();

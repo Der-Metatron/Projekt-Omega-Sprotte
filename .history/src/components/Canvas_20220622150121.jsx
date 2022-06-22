@@ -24,8 +24,7 @@ export const Canvas = () => {
         width="1024"
         height="640"
       />
-      <p>Score: {score}</p> {/* PunkteZahl im Canvas Zeigen */}
-      {/* Stopt das Game  */}
+      <p>Score: {score}</p>
       <button
         onClick={() => {
           stopGame();
@@ -33,7 +32,6 @@ export const Canvas = () => {
       >
         Stop
       </button>
-      {/* Weiter mit Game */}
       <button
         onClick={() => {
           continueGame();
@@ -44,7 +42,3 @@ export const Canvas = () => {
     </>
   );
 };
-/*  Musik,autoplay,loop.------ VOLUME GEHT NICHT????! -->
-    <!-- <audio src="audio/Musik/titel 1.mp3" autoplay loop autoplay volume="0.5">
-      Sorry - Ihre Browser hat keine Unterstützung für dieses Audio-Format.
-    </audio>  */

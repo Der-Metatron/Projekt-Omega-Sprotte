@@ -33,7 +33,6 @@ export const Canvas = () => {
       >
         Stop
       </button>
-      {/* Weiter mit Game */}
       <button
         onClick={() => {
           continueGame();

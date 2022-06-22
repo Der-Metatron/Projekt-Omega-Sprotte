@@ -6,6 +6,8 @@ let KEY_RIGHT = false; // 39
 let canvas;
 let ctx;
 let backgroundImage = new Image();
+let increaseScore = () => {};
+let gameStarted = false;
 
 /* Audio Web-Audio-API  */
 /*  
@@ -23,7 +25,7 @@ let rocket = {
   height: 50,
   src: "img/ufo1.png",
 };
-
+let ufos1 = []; /* test */
 let ufos = [];
 let shots = [];
 // Taste Unten
@@ -118,7 +120,28 @@ document.onkeyup = function (e) {
     KEY_RIGHT = false;
   }
 };
+/* --------------------------------------------------------------------------------- */
+export function initGame(context, increaseScoreCallback) {
+  ctx = context;
+  increaseScore = increaseScoreCallback;
+  loadImages();
+  setInterval(update, 1000 / 25);
+  setInterval(createUfos, 2000); /* Wie schnell Feinde kommen */
+  setInterval(checkForCollion, 1000 / 25);
+  setInterval(checkForShoot, 1000 / 10);
+  gameStarted = true;
+  draw();
+}
 
+export function stopGame() {
+  gameStarted = false;
+}
+
+export function continueGame() {
+  gameStarted = true;
+  draw();
+}
+/* ------------------------------PROBLEM------------------------------------------- */
 function startGame() {
   canvas = document.getElementById("canvas");
   ctx = canvas.getContext("2d");
@@ -129,9 +152,9 @@ function startGame() {
   setInterval(checkForShoot, 1000 / 10);
   draw();
 }
-
+/* ------------------------------------------------------------------------------------ */
 function checkForCollion() {
-  ufos.forEach(function (ufo) {
+  ufos.forEach(function (ufo, ufo1) {
     // Kontrollieren, ob UFO mit Rakete kollidiert
     if (
       rocket.x + rocket.width > ufo.x &&
@@ -156,6 +179,7 @@ function checkForCollion() {
         ufo.hit = true;
         ufo.img.src = "img/boom3.png";
         console.log("Collion!!!");
+        increaseScore(10);
 
         setTimeout(() => {
           ufos = ufos.filter((u) => u !== ufo);
@@ -240,5 +264,7 @@ function draw() {
     ctx.drawImage(shot.img, shot.x, shot.y, shot.width, shot.height);
   });
 
-  requestAnimationFrame(draw);
+  if (gameStarted) {
+    requestAnimationFrame(draw);
+  }
 }

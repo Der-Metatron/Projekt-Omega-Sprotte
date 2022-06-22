@@ -3,7 +3,6 @@ let KEY_UP = false; // 38
 let KEY_DOWN = false; // 40
 let KEY_LEFT = false; // 37
 let KEY_RIGHT = false; // 39
-let canvas;
 let ctx;
 let backgroundImage = new Image();
 let increaseScore = () => {};
@@ -18,7 +17,6 @@ const source = audioContext.createMediaElementSource(element);
 source.connect(audioContext.destination);
 audio.play();
 */
-/* OMEGA */
 let rocket = {
   x: 50,
   y: 200,
@@ -26,8 +24,7 @@ let rocket = {
   height: 50,
   src: "img/ufo1.png",
 };
-/* ---------------------------------------------------------------------------------- */
-/* let ufos1 = []; */ /* test */
+let ufos1 = []; /* test */
 let ufos = [];
 let shots = [];
 // Taste Unten
@@ -69,14 +66,12 @@ document.onkeyleft = function (e) {
     // Nach unten gedrückt
     KEY_DOWN = true;
   }
-  /* -------------------------------------------------------------------------------------- */
   if (e.keyCode === 37) {
     KEY_LEFT = true;
   }
   if (e.keyCode === 39) {
     KEY_RIGHT = true;
   }
-  /* ------------------------------------------------------------------------------------------ */
 };
 // Taste Rechts
 document.onkeyright = function (e) {
@@ -124,15 +119,15 @@ document.onkeyup = function (e) {
     KEY_RIGHT = false;
   }
 };
-/* --------------------------------------------------------------------------------- */
+
 export function initGame(context, increaseScoreCallback) {
   ctx = context;
   increaseScore = increaseScoreCallback;
   loadImages();
-  setInterval(update, 1250 / 25); /* Wie schnell Feinde kommen */
-  setInterval(createUfos, 1000); /* Wie viele Feinde gerendert werden */
-  setInterval(checkForCollion, 1000 / 25); /* Collisions abfrage */
-  setInterval(checkForShoot, 1000 / 10); /* Schuss Geschwindigkeit */
+  setInterval(update, 1000 / 25);
+  setInterval(createUfos, 2000); /* Wie schnell Feinde kommen */
+  setInterval(checkForCollion, 1000 / 25);
+  setInterval(checkForShoot, 1000 / 10);
   gameStarted = true;
   draw();
 }
@@ -145,13 +140,7 @@ export function continueGame() {
   gameStarted = true;
   draw();
 }
-/* ------------------------------PROBLEM------------------------------------------- */
-// eslint-disable-next-line no-unused-vars
-function startGame() {
-  canvas = document.getElementById("canvas");
-  ctx = canvas.getContext("2d");
-}
-/* ------------------------------------------------------------------------------------ */
+
 function checkForCollion() {
   ufos.forEach(function (ufo) {
     // Kontrollieren, ob UFO mit Rakete kollidiert

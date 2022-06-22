@@ -129,10 +129,10 @@ export function initGame(context, increaseScoreCallback) {
   ctx = context;
   increaseScore = increaseScoreCallback;
   loadImages();
-  setInterval(update, 1250 / 25); /* Wie schnell Feinde kommen */
-  setInterval(createUfos, 1000); /* Wie viele Feinde gerendert werden */
-  setInterval(checkForCollion, 1000 / 25); /* Collisions abfrage */
-  setInterval(checkForShoot, 1000 / 10); /* Schuss Geschwindigkeit */
+  setInterval(update, 1000 / 25);
+  setInterval(createUfos, 2000); /* Wie schnell Feinde kommen */
+  setInterval(checkForCollion, 1000 / 25);
+  setInterval(checkForShoot, 1000 / 10);
   gameStarted = true;
   draw();
 }
@@ -150,6 +150,12 @@ export function continueGame() {
 function startGame() {
   canvas = document.getElementById("canvas");
   ctx = canvas.getContext("2d");
+  loadImages();
+  setInterval(update, 1000 / 25);
+  setInterval(createUfos, 2000); /* Wie schnell Feinde kommen */
+  setInterval(checkForCollion, 1000 / 25);
+  setInterval(checkForShoot, 1000 / 10);
+  draw();
 }
 /* ------------------------------------------------------------------------------------ */
 function checkForCollion() {
