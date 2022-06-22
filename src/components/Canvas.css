@@ -1,4 +1,4 @@
-canvas {
+.game-canvas {
   background-color: rgba(168, 35, 35, 0.8);
   padding-left: 0;
   padding-right: 0;
@@ -8,15 +8,4 @@ canvas {
   width: 1224px;
   height: 640px;
   padding: 1rem;
-}
-:root {
-  /* background-color: black; */
-}
-h1 {
-  color: brown;
-  text-align: center;
-}
-footer {
-  color: aliceblue;
-  text-align: center;
 }
