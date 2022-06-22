@@ -42,17 +42,11 @@ export const Canvas = () => {
       >
         Weiter
       </button>
-      <ReactAudioPlayer
-        src="/public/audio/Musik/titel 1.mp3"
-        autoPlay
-        controls
-      />
-      ;
     </>
   );
 };
 /* -------------------------------------------------------------------------------------- */
-
+<ReactAudioPlayer src="my_audio_file.ogg" autoPlay controls />;
 /* ----------------------------AUDIO----------------------------------------------------- */
 /* const useAudio = (url) => {
   const [audio] = useState(new Audio(url));

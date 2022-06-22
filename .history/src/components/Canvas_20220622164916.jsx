@@ -1,7 +1,6 @@
 import React, { useRef, useEffect, useState } from "react";
 import "./Canvas.css";
 import { initGame, stopGame, continueGame } from "../util/canvas-game";
-import ReactAudioPlayer from "react-audio-player";
 
 export const Canvas = () => {
   const [score, setScore] = useState(0);
@@ -24,7 +23,7 @@ export const Canvas = () => {
         className="game-canvas"
         width="1024"
         height="640"
-      />{" "}
+      />
       <p>Score: {score}</p> {/* PunkteZahl im Canvas Zeigen */}
       {/* Stopt das Game  */}
       <button
@@ -42,17 +41,9 @@ export const Canvas = () => {
       >
         Weiter
       </button>
-      <ReactAudioPlayer
-        src="/public/audio/Musik/titel 1.mp3"
-        autoPlay
-        controls
-      />
-      ;
     </>
   );
 };
-/* -------------------------------------------------------------------------------------- */
-
 /* ----------------------------AUDIO----------------------------------------------------- */
 /* const useAudio = (url) => {
   const [audio] = useState(new Audio(url));

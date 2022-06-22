@@ -25,6 +25,7 @@ export const Canvas = () => {
         width="1024"
         height="640"
       />{" "}
+      <ReactAudioPlayer src="/public/audio/Musik/titel 1.mp3" autoPlay />
       <p>Score: {score}</p> {/* PunkteZahl im Canvas Zeigen */}
       {/* Stopt das Game  */}
       <button
@@ -33,7 +34,12 @@ export const Canvas = () => {
         }}
       >
         Stop
-      </button>
+      </button>{" "}
+      <ReactAudioPlayer
+        src="/public/audio/Musik/titel 1.mp3"
+        autoPlay
+        control
+      />
       {/* Weiter mit Game */}
       <button
         onClick={() => {
@@ -42,12 +48,6 @@ export const Canvas = () => {
       >
         Weiter
       </button>
-      <ReactAudioPlayer
-        src="/public/audio/Musik/titel 1.mp3"
-        autoPlay
-        controls
-      />
-      ;
     </>
   );
 };
