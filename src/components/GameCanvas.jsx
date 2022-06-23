@@ -1,5 +1,7 @@
 import React, { useRef, useEffect, useState } from "react";
 import { GameControl } from "../services/game-control";
+import ReactAudioPlayer from "react-audio-player";
+
 import "./GameCanvas.css";
 
 export const GameCanvas = () => {
@@ -52,6 +54,12 @@ export const GameCanvas = () => {
       </button>
       <p>Score: {score}</p>
       <p>{message}</p>
+
+      <ReactAudioPlayer
+        src="/public/audio/Musik/titel 1.mp3"
+        autoPlay
+        controls
+      />
     </>
   );
 };
