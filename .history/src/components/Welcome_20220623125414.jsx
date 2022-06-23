@@ -25,9 +25,9 @@ export const Welcome = ({ onContinue }) => {
       ></div>
     );
   }
-  /* ----------------------------------------------------------------------------- */
+
   console.log(starDivs);
-  /* ------------------------------------------------------------------------------ */
+
   return (
     <div className="welcome-container">
       {starDivs}

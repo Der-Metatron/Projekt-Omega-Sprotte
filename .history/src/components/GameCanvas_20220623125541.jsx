@@ -31,23 +31,20 @@ export const GameCanvas = () => {
 
   return (
     <>
-      {/* -----------------Größe desCanvas-------------------------------------- */}
       <canvas
         ref={canvasRef}
         className="game-canvas"
         width="1024"
         height="640"
       />
-      {/* --------------Button Stop------------------------------------------- */}
+
       <button
-        className="canvas_button"
         onClick={() => {
           gameControl.current.endGame();
         }}
       >
         Stop
       </button>
-      {/* ----------------Button Stsrt------------------------------------ */}
       <button
         onClick={() => {
           gameControl.current.startGame();
@@ -55,18 +52,16 @@ export const GameCanvas = () => {
       >
         Start
       </button>
-      <p>Score: {score}</p> {/* Angezeigter Punktezähler */}
-      <p>{message}</p> {/* FEHLER */}
+      <p>Score: {score}</p>
+      <p>{message}</p>
       {/* -------------------------------AUDIO----------------------------------------------- */}
-      <div className="player">
-        <ReactAudioPlayer
-          src="/audio/Musik/titel 1.mp3"
-          autoPlay
-          controls
-          loop
-          volume={0.5}
-        />
-      </div>
+      <ReactAudioPlayer
+        src="/audio/Musik/titel 1.mp3"
+        autoPlay
+        controls
+        loop
+        volume={0.5}
+      />
       {/* ------------------------------------------------------------------------------------ */}
     </>
   );

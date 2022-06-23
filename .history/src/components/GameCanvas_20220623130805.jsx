@@ -55,8 +55,8 @@ export const GameCanvas = () => {
       >
         Start
       </button>
-      <p>Score: {score}</p> {/* Angezeigter Punktezähler */}
-      <p>{message}</p> {/* FEHLER */}
+      <p>Score: {score}</p>
+      <p>{message}</p>
       {/* -------------------------------AUDIO----------------------------------------------- */}
       <div className="player">
         <ReactAudioPlayer

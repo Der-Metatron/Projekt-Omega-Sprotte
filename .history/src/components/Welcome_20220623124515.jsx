@@ -25,9 +25,9 @@ export const Welcome = ({ onContinue }) => {
       ></div>
     );
   }
-  /* ----------------------------------------------------------------------------- */
+
   console.log(starDivs);
-  /* ------------------------------------------------------------------------------ */
+
   return (
     <div className="welcome-container">
       {starDivs}
@@ -78,7 +78,6 @@ export const Welcome = ({ onContinue }) => {
           src="/audio/Musik/Projekt Omega cut.mp3"
           autoPlay
           controls
-          volume={0.5}
         />
         {/* ----------------------------------------------------------------------- */}
         <button
