@@ -22,7 +22,14 @@ export const Welcome = ({ onContinue }) => {
           top: xy[0],
           left: xy[1],
         }}
-      ></div>
+      >
+        {" "}
+        <ReactAudioPlayer
+          src="/public/audio/Musik/Projekt Omega cut.mp3"
+          autoPlay
+          controls
+        />
+      </div>
     );
   }
 
@@ -73,12 +80,6 @@ export const Welcome = ({ onContinue }) => {
       </div>
 
       <footer>
-        <ReactAudioPlayer
-          src="/audio/Musik/Projekt Omega cut.mp3"
-          autoPlay
-          controls
-          loop
-        />
         <button
           onClick={() => {
             onContinue();

@@ -31,6 +31,9 @@ export const Welcome = ({ onContinue }) => {
   return (
     <div className="welcome-container">
       {starDivs}
+      <audio id="Musik" autoplay>
+        <source src="/audio/Musik/Projekt Omega cut.mp3" type="audio/mp3" />
+      </audio>
 
       {/* <!-- Erste Inro laufschrift --> */}
 
@@ -73,12 +76,6 @@ export const Welcome = ({ onContinue }) => {
       </div>
 
       <footer>
-        <ReactAudioPlayer
-          src="/audio/Musik/Projekt Omega cut.mp3"
-          autoPlay
-          controls
-          loop
-        />
         <button
           onClick={() => {
             onContinue();

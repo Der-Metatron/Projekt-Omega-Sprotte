@@ -74,10 +74,9 @@ export const Welcome = ({ onContinue }) => {
 
       <footer>
         <ReactAudioPlayer
-          src="/audio/Musik/Projekt Omega cut.mp3"
+          src="/public/audio/Musik/Projekt Omega cut.mp3"
           autoPlay
           controls
-          loop
         />
         <button
           onClick={() => {

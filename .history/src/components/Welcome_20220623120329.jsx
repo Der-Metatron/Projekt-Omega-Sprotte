@@ -27,7 +27,11 @@ export const Welcome = ({ onContinue }) => {
   }
 
   console.log(starDivs);
-
+  <ReactAudioPlayer
+    src="/public/audio/Musik/Projekt Omega cut.mp3"
+    autoPlay
+    controls
+  />;
   return (
     <div className="welcome-container">
       {starDivs}
@@ -73,12 +77,6 @@ export const Welcome = ({ onContinue }) => {
       </div>
 
       <footer>
-        <ReactAudioPlayer
-          src="/audio/Musik/Projekt Omega cut.mp3"
-          autoPlay
-          controls
-          loop
-        />
         <button
           onClick={() => {
             onContinue();
