@@ -34,11 +34,11 @@ export const Welcome = ({ onContinue }) => {
 
       {/* <!-- Erste Inro laufschrift --> */}
 
-      <section className="intro">
+      <section class="intro">
         In einer Zeit bei DCI mit einer kleinen aufstrebenden Programmier
         Gruppe...................
       </section>
-      <section className="logo">
+      <section class="logo">
         <img src="/img/1mfdt1024.jpg" alt="Projekt-Omega Geschichte" />
       </section>
       <div id="scroller">

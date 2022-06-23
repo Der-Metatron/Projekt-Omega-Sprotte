@@ -58,13 +58,16 @@ export const GameCanvas = () => {
       <p>Score: {score}</p> {/* Angezeigter Punktezähler */}
       <p>{message}</p> {/* FEHLER */}
       {/* -------------------------------AUDIO----------------------------------------------- */}
-      <ReactAudioPlayer
-        src="/audio/Musik/titel 1.mp3"
-        autoPlay
-        controls
-        loop
-        volume={0.5}
-      />
+      
+        <ReactAudioPlayer
+          src="/audio/Musik/titel 1.mp3"
+          autoPlay
+          controls
+          loop
+          volume={0.5}
+        />
+      </div>
+      {/* ------------------------------------------------------------------------------------ */}
     </>
   );
 };
