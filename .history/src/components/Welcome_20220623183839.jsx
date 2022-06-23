@@ -39,7 +39,7 @@ export const Welcome = ({ onContinue }) => {
         Gruppe...................
       </section>
       <section className="logo">
-        <img src="/public/img/Unbenannt.png" alt="Projekt-Omega Geschichte" />
+        <img src="/img/Unbenannt.png" alt="Projekt-Omega Geschichte" />
       </section>
       <div id="scroller">
         <div id="content">
@@ -70,10 +70,6 @@ export const Welcome = ({ onContinue }) => {
             die gelegenheit gegeben haben unser Ideen zu verwirklichen.Special
             Thanks to Ralf & Chriatian. Und jetzt viel Spaß beim Zocken!!!
           </p>
-          <h2>
-            Pfeil Taste Oben, Pfeil Taste Unten, Pfeil Taste Links, Pfeil Taste
-            Rechts, Space = Schießen
-          </h2>
         </div>
       </div>
 
@@ -87,7 +83,6 @@ export const Welcome = ({ onContinue }) => {
         />
         {/* ----------------------------------------------------------------------- */}
         <button
-          className="startbutton"
           onClick={() => {
             onContinue();
           }}

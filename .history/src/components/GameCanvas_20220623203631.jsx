@@ -59,6 +59,7 @@ export const GameCanvas = () => {
       <p className="punkte">Score: {score}</p> {/* Angezeigter Punktezähler */}
       {/* Muss noch eine Routine Geschrieben werden. */}
       {/* <p>{message}</p>  */}{" "}
+      {/* -------------------------------AUDIO----------------------------------------------- */}
     </>
   );
 };

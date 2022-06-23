@@ -21,7 +21,6 @@ function App() {
       ) : (
         <>
           {" "}
-          {/* ----------------------AUDIO IN CANVAS-------------------------- */}
           <ReactAudioPlayer
             className="player"
             src="/audio/Musik/titel 1.mp3"

@@ -20,17 +20,8 @@ function App() {
         </>
       ) : (
         <>
-          {" "}
-          {/* ----------------------AUDIO IN CANVAS-------------------------- */}
-          <ReactAudioPlayer
-            className="player"
-            src="/audio/Musik/titel 1.mp3"
-            autoPlay
-            controls
-            loop
-            volume={0.5}
-          />
           <h1>Projekt Omega</h1>
+
           <GameCanvas />
           <Footer />
         </>

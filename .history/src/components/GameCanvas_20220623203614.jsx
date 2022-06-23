@@ -1,6 +1,6 @@
 import React, { useRef, useEffect, useState } from "react";
 import { GameControl } from "../services/game-control";
-/* import ReactAudioPlayer from "react-audio-player"; */
+import ReactAudioPlayer from "react-audio-player";
 import "./GameCanvas.css";
 
 export const GameCanvas = () => {
@@ -59,6 +59,7 @@ export const GameCanvas = () => {
       <p className="punkte">Score: {score}</p> {/* Angezeigter Punktezähler */}
       {/* Muss noch eine Routine Geschrieben werden. */}
       {/* <p>{message}</p>  */}{" "}
+      {/* -------------------------------AUDIO----------------------------------------------- */}
     </>
   );
 };

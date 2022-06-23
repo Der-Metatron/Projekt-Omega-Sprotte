@@ -130,14 +130,14 @@ footer {
 /*  */
 .startbutton {
   display: inline-block;
-  margin: 20px;
+  margin: 200px;
   text-decoration: none;
   font-family: Arial;
   font-size: 20px;
   border: 1px solid #56ae00;
   border-radius: 25px 5px 5px 25px;
-  background-color: aqua;
-  color: #000000;
+  background-color: #aae472;
+  color: #3c5721;
   padding: 5px 10px 5px 25px;
 }
 .startbutton:hover {

@@ -20,8 +20,7 @@ function App() {
         </>
       ) : (
         <>
-          {" "}
-          {/* ----------------------AUDIO IN CANVAS-------------------------- */}
+          <h1>Projekt Omega</h1>
           <ReactAudioPlayer
             className="player"
             src="/audio/Musik/titel 1.mp3"
@@ -30,7 +29,6 @@ function App() {
             loop
             volume={0.5}
           />
-          <h1>Projekt Omega</h1>
           <GameCanvas />
           <Footer />
         </>

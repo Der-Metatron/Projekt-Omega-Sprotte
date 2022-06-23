@@ -1,5 +1,5 @@
 canvas {
-  background-color: aquamarine;
+  background-color: rgba(122, 234, 10, 0.8);
   padding-left: 0;
   padding-right: 0;
   margin-left: auto;
@@ -24,6 +24,6 @@ h2 {
 .stopbutton {
   border-radius: 50%;
 }
-.weiterbutton {
+.startbutton {
   border-radius: 50%;
 }

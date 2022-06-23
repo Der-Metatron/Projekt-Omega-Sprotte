@@ -4,11 +4,6 @@ body {
   height: 100%;
 }
 
-h1 {
-  text-align: center;
-  color: aquamarine;
-}
-
 body {
   background: linear-gradient(-45deg, #ee7752, #620202, #000000, #265046);
   background-size: 400% 400%;

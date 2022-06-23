@@ -1,5 +1,5 @@
 canvas {
-  background-color: aquamarine;
+  background-color: rgba(122, 234, 10, 0.8);
   padding-left: 0;
   padding-right: 0;
   margin-left: auto;
@@ -14,7 +14,7 @@ canvas {
   color: #56ae00;
   font-size: 2rem;
   font-weight: bolder;
-  text-decoration: underline;
+
   text-align: center;
 }
 h2 {
@@ -22,8 +22,4 @@ h2 {
 }
 
 .stopbutton {
-  border-radius: 50%;
-}
-.weiterbutton {
-  border-radius: 50%;
 }

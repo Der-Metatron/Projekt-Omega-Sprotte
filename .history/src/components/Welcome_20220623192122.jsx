@@ -39,7 +39,7 @@ export const Welcome = ({ onContinue }) => {
         Gruppe...................
       </section>
       <section className="logo">
-        <img src="/public/img/Unbenannt.png" alt="Projekt-Omega Geschichte" />
+        <img src="img/Unbenannt.png" alt="Projekt-Omega Geschichte" />
       </section>
       <div id="scroller">
         <div id="content">

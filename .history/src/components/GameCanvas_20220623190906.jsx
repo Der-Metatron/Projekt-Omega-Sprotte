@@ -1,11 +1,11 @@
 import React, { useRef, useEffect, useState } from "react";
 import { GameControl } from "../services/game-control";
-/* import ReactAudioPlayer from "react-audio-player"; */
+import ReactAudioPlayer from "react-audio-player";
+
 import "./GameCanvas.css";
 
 export const GameCanvas = () => {
   const [score, setScore] = useState(0);
-  // eslint-disable-next-line no-unused-vars
   const [message, setMessage] = useState("");
   const canvasRef = useRef(null);
   const gameControl = useRef(null);
@@ -47,7 +47,7 @@ export const GameCanvas = () => {
       >
         Stop
       </button>
-      {/* ----------------Button Start------------------------------------ */}
+      {/* ----------------Button Stsrt------------------------------------ */}
       <button
         className="weiterbutton"
         onClick={() => {
@@ -57,8 +57,15 @@ export const GameCanvas = () => {
         Start
       </button>
       <p className="punkte">Score: {score}</p> {/* Angezeigter Punktezähler */}
-      {/* Muss noch eine Routine Geschrieben werden. */}
-      {/* <p>{message}</p>  */}{" "}
+      <p>{message}</p> {/* FEHLER */}
+      {/* -------------------------------AUDIO----------------------------------------------- */}
+      <ReactAudioPlayer
+        src="/audio/Musik/titel 1.mp3"
+        autoPlay
+        /* controls */
+        loop
+        volume={0.5}
+      />
     </>
   );
 };
