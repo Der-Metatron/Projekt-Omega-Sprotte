@@ -1,11 +1,22 @@
+const KeysToWatch = [
+  "Space",
+  "ArrowUp",
+  "ArrowDown",
+  "ArrowLeft",
+  "ArrowRight",
+];
 const KeyStates = {}; // Space, ArrowUp, ArrowDown, ArrowLeft, ArrowRight
 document.addEventListener("keydown", (e) => {
-  e.preventDefault();
-  KeyStates[e.code] = true;
+  if (KeysToWatch.includes(e.code)) {
+    e.preventDefault();
+    KeyStates[e.code] = true;
+  }
 });
 document.addEventListener("keyup", (e) => {
-  e.preventDefault();
-  KeyStates[e.code] = false;
+  if (KeysToWatch.includes(e.code)) {
+    e.preventDefault();
+    KeyStates[e.code] = false;
+  }
 });
 
 export const GameControl = (context) => {
