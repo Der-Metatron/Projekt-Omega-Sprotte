@@ -44,7 +44,7 @@ export const GameControl = (context) => {
   let shots = [];
   /* ------------------Background Bild--------------------------------------- */
   const loadImages = () => {
-    backgroundImage.src = "img/- WALLPAPER - (276).jpg";
+    backgroundImage.src = "img/- WALLPAPER - (348).jpg";
     rocket.img = new Image();
     rocket.img.src = rocket.src;
   };
