@@ -67,7 +67,7 @@ export const Welcome = ({ onContinue }) => {
           <p>Erstellt mit: Canvas, Html, Reackt, MongoDb, Express, Css.</p>
           <p>
             Danke an alle die uns bei diesen Projekt unterstützt haben und uns
-            die gelegenheit gegeben haben unser Ideen zu verwirklichen. Special
+            die gelegenheit gegeben haben unser Ideen zu verwirklichen.Special
             Thanks to Ralf & Chriatian. Und jetzt viel Spaß beim Zocken!!!
           </p>
           <h2>

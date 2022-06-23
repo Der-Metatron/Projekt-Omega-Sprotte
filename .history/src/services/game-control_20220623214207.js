@@ -240,8 +240,8 @@ export const GameControl = (context) => {
   };
   const startIntervals = () => {
     clearIntervals();
-    intervals.update = setInterval(update, 800 / 25); /* schneller Fliegen */
-    intervals.createUfos = setInterval(createUfos, 1000); /*feinde schneller*/
+    intervals.update = setInterval(update, 1000 / 25);
+    intervals.createUfos = setInterval(createUfos, 2000);
     intervals.checkForCollision = setInterval(checkForCollision, 1000 / 25);
     intervals.checkForShoot = setInterval(checkForShoot, 1000 / 10);
   };

@@ -43,7 +43,7 @@
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  z-index: 1;
+  z-index: 4;
   width: 100%;
   opacity: 0;
   animation: logo 10s ease-out 9s;
@@ -134,8 +134,7 @@ footer {
   text-decoration: none;
   font-family: Arial;
   font-size: 20px;
-  border: 3px solid #ff0004;
-  border-style: groove;
+  border: 1px solid #56ae00;
   border-radius: 25px 5px 5px 25px;
   background-color: aqua;
   color: #000000;
