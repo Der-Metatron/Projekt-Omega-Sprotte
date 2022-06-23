@@ -1,5 +1,5 @@
 canvas {
-  background-color: rgba(122, 234, 10, 0.8);
+  background-color: rgba(168, 35, 35, 0.8);
   padding-left: 0;
   padding-right: 0;
   margin-left: auto;
@@ -8,4 +8,13 @@ canvas {
   width: 1224px;
   height: 640px;
   padding: 1rem;
+}
+
+h1 {
+  color: brown;
+  text-align: center;
+}
+footer {
+  color: aliceblue;
+  text-align: center;
 }

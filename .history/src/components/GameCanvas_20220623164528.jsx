@@ -2,7 +2,7 @@ import React, { useRef, useEffect, useState } from "react";
 import { GameControl } from "../services/game-control";
 import ReactAudioPlayer from "react-audio-player";
 
-import "./GameCanvas.css";
+import "../GameCanvas.css";
 
 export const GameCanvas = () => {
   const [score, setScore] = useState(0);

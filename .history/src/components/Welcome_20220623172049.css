@@ -27,7 +27,7 @@
   width: 1px;
   height: 1px;
   background-color: #fff;
-  z-index: 3;
+  z-index: 2;
 }
 
 .intro {
@@ -65,7 +65,7 @@
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  z-index: 2;
+  z-index: 7;
   width: 100%;
   opacity: 0;
   animation: logo 10s ease-out 9s;

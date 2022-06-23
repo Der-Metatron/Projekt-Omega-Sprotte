@@ -44,7 +44,6 @@ export const Welcome = ({ onContinue }) => {
       <div id="scroller">
         <div id="content">
           <p id="title">Episode DCI Abschlussprojekt</p>
-          <br></br>
           <p id="subtitle">Projekt-Omega</p>
           <br />
           <p>

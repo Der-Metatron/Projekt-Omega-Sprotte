@@ -44,7 +44,6 @@ export const Welcome = ({ onContinue }) => {
       <div id="scroller">
         <div id="content">
           <p id="title">Episode DCI Abschlussprojekt</p>
-          <br></br>
           <p id="subtitle">Projekt-Omega</p>
           <br />
           <p>
@@ -74,14 +73,6 @@ export const Welcome = ({ onContinue }) => {
       </div>
 
       <footer>
-        {/* ---------------------AUDIO-------------------------------------------- */}
-        <ReactAudioPlayer
-          src="/audio/Musik/Projekt Omega cut.mp3"
-          autoPlay
-          controls
-          volume={0.5}
-        />
-        {/* ----------------------------------------------------------------------- */}
         <button
           onClick={() => {
             onContinue();
