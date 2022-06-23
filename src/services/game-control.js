@@ -5,7 +5,7 @@ const KeysToWatch = [
   "ArrowLeft",
   "ArrowRight",
 ];
-const KeyStates = {}; // Space, ArrowUp, ArrowDown, ArrowLeft, ArrowRight
+const KeyStates = {};
 document.addEventListener("keydown", (e) => {
   if (KeysToWatch.includes(e.code)) {
     e.preventDefault();
