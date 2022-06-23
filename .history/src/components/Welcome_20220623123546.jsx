@@ -77,6 +77,8 @@ export const Welcome = ({ onContinue }) => {
           src="/audio/Musik/Projekt Omega cut.mp3"
           autoPlay
           controls
+          loop
+          volume
         />
         <button
           onClick={() => {
