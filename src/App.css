@@ -1,3 +1,16 @@
+:root {
+  background-color: black;
+  color: aliceblue;
+}
+h1 {
+  color: brown;
+  text-align: center;
+}
+footer {
+  color: aliceblue;
+  text-align: center;
+}
+
 .App {
   text-align: center;
 }
