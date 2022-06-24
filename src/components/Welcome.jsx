@@ -88,7 +88,7 @@ export const Welcome = ({ onContinue }) => {
           src="/audio/Musik/Projekt Omega titel.mp3"
           autoPlay
           controls
-          volume={0.0}
+          volume={0.5}
         />
         {/* ----------------------------------------------------------------------- */}
         <button

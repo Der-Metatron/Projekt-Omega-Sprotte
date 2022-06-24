@@ -147,3 +147,11 @@ footer {
   padding: 5px 25px 5px 10px;
   border-radius: 5px 25px 25px 5px;
 }
+/* ----------------------------------------------------------------- */
+.background-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+}
