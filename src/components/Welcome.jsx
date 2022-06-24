@@ -39,7 +39,11 @@ export const Welcome = ({ onContinue }) => {
         Gruppe...................
       </section>
       <section className="logo">
-        <img src="/img/Unbenannt1.png" alt="Projekt-Omega Geschichte" />
+        <img
+          className="ship"
+          src="/img/Unbenannt1.png"
+          alt="Projekt-Omega Geschichte"
+        />
       </section>
       <div id="scroller">
         <div id="content">
@@ -68,7 +72,8 @@ export const Welcome = ({ onContinue }) => {
           <p>
             Danke an alle die uns bei diesen Projekt unterstützt haben und uns
             die gelegenheit gegeben haben unser Ideen zu verwirklichen. Special
-            Thanks to Ralf & Chriatian. Und jetzt viel Spaß beim Zocken!!!
+            Thanks to Ralf, Edward & Chriatian. Und jetzt viel Spaß beim
+            Zocken!!!
           </p>
           <h2>
             Pfeil Taste Oben, Pfeil Taste Unten, Pfeil Taste Links, Pfeil Taste

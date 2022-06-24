@@ -5,7 +5,7 @@
   width: 1px;
   height: 1px;
   background-color: #fff;
-  z-index: 3;
+  z-index: 2;
 }
 
 .intro {
@@ -40,20 +40,22 @@
 
 .logo {
   position: absolute;
-  top: 50%;
-  left: 50%;
+
   transform: translate(-50%, -50%);
   z-index: 2;
-  width: 100%;
-  opacity: 0;
-  animation: logo 10s ease-out 9s;
+  top: 50%;
+  left: 50%;
+  /*  opacity: 0; */
 }
 
 .logo img {
-  width: inherit;
+  /*  width: inherit; */
+  width: 100%;
+  opacity: 0;
+  animation: ship 10s ease-out 9s;
 }
 
-@keyframes logo {
+@keyframes ship {
   0% {
     opacity: 1;
     transform: translate(-50%, -50%) scale(2);
