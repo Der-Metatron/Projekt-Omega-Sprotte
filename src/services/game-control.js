@@ -213,6 +213,35 @@ export const GameControl = (context) => {
       shots.push(shot);
     }
   };
+  /* ---------Bei gedrückter Space Taste Sound abspielen---FEHLER!!!------------- */
+  let currentKey = 0,
+    p = document.getElementById("p");
+
+  document.addEventListener(
+    "keydown",
+    function (e) {
+      let key = e.keyCode - 32;
+
+      if (currentKey !== key)
+        p.innerHTML =
+          "<audio autoplay='autoplay' src='button" +
+          key +
+          "/audio/laser1.mp3'/>";
+
+      currentKey = key;
+    },
+    false
+  );
+
+  document.addEventListener(
+    "keyup",
+    function (e) {
+      p.innerHTML = "";
+      currentKey = 0;
+    },
+    false
+  );
+  /* --------------------------------------------------------------------------- */
 
   const gameOver = () => {
     clearIntervals();
