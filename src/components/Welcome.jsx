@@ -103,11 +103,13 @@ export const Welcome = ({ onContinue }) => {
           </button>
         </footer>
       </div>
+      {/* ----------------Hintergrund Bild für Welcome (<>WICHTIG!!!)--------------- */}
       <div class="background-container">
         <img
           src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/1231630/moon2.png"
           alt=""
         />
+        {/* --------------------------------------------------------------------------------- */}
       </div>
     </>
   );
