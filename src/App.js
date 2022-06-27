@@ -28,7 +28,7 @@ function App() {
             autoPlay
             controls
             loop
-            volume={0.4}
+            volume={0.0}
           />
           <h1>Projekt Omega</h1>
           <GameCanvas />
