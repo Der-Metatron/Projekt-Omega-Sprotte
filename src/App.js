@@ -4,7 +4,7 @@ import { useState } from "react";
 import { GameCanvas } from "./components/GameCanvas";
 import { Welcome } from "./components/Welcome";
 import { Footer } from "./components/Footer";
-import ReactAudioPlayer from "react-audio-player";
+/* import ReactAudioPlayer from "react-audio-player"; */
 
 function App() {
   const [currentPage, setCurrentPage] = useState(0);
@@ -22,14 +22,14 @@ function App() {
         <>
           {" "}
           {/* ----------------------AUDIO IN CANVAS-------------------------- */}
-          <ReactAudioPlayer
+          {/*     <ReactAudioPlayer
             className="player"
             src="/audio/Musik/titel 1.mp3"
             autoPlay
             controls
             loop
             volume={0.4}
-          />
+          /> */}
           <GameCanvas />
           <Footer />
         </>
