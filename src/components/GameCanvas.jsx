@@ -31,6 +31,8 @@ export const GameCanvas = () => {
 
   return (
     <>
+      {" "}
+      <p className="punkte">Score: {score}</p> {/* Angezeigter Punktezähler */}
       {/* -----------------Größe desCanvas-------------------------------------- */}
       <canvas
         ref={canvasRef}
@@ -38,25 +40,28 @@ export const GameCanvas = () => {
         width="1024"
         height="640"
       />
-      {/* --------------Button Stop------------------------------------------- */}
-      <button
-        className="stopbutton"
-        onClick={() => {
-          gameControl.current.endGame();
-        }}
-      >
-        Stop
-      </button>
-      {/* ----------------Button Start------------------------------------ */}
-      <button
-        className="weiterbutton"
-        onClick={() => {
-          gameControl.current.startGame();
-        }}
-      >
-        New Game
-      </button>
-      <p className="punkte">Score: {score}</p> {/* Angezeigter Punktezähler */}
+      {/* --------------Button Container------------------------------------------- */}
+      <div className="buttoncontainer">
+        <button
+          className="stopgame"
+          onClick={() => {
+            gameControl.current.endGame();
+          }}
+        >
+          Stop Game
+        </button>
+
+        {/* ----------------Button Start------------------------------------ */}
+
+        <button
+          className="newgame"
+          onClick={() => {
+            gameControl.current.startGame();
+          }}
+        >
+          New Game
+        </button>
+      </div>
       {/* Muss noch eine Routine Geschrieben werden. */}
       {/* <p>{message}</p>  */}{" "}
     </>

@@ -71,6 +71,7 @@
 
 p {
   color: #ffe81f;
+  text-shadow: black 0.1em 0.1em 0.2em;
 }
 
 #scroller {

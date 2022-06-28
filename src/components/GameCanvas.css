@@ -19,60 +19,159 @@ canvas {
 }
 h2 {
   color: aqua;
+  text-align: center;
+  text-shadow: 0.1em 0.1em 0.2em #56ae00;
+}
+/* -------------------BUTTON CONTAINER-------------------------------------------- */
+.buttoncontainer {
+  display: flex;
+  justify-content: space-between;
 }
 
-.stopbutton {
-  border-radius: 50%;
-}
-/* -------------------NEW GAME BUTTON---------------------------------------- */
-.weiterbutton {
-  border-radius: 50%;
-  --glow-color: rgb(213, 226, 35);
-  --glow-spread-color: rgba(123, 233, 255, 0.781);
-  --enhanced-glow-color: rgb(231, 206, 255);
-  --btn-color: rgb(191, 47, 40);
-  border: 0.25em solid var(--glow-color);
-  padding: 1em 3em;
-  color: var(--glow-color);
-  font-size: 10px;
-  font-weight: bold;
-  background-color: var(--btn-color);
-  border-radius: 1em;
-  outline: none;
-  box-shadow: 0 0 1em 0.25em var(--glow-color),
-    0 0 4em 1em var(--glow-spread-color),
-    inset 0 0 0.75em 0.25em var(--glow-color);
-  text-shadow: 0 0 0.5em var(--glow-color);
+/* -----------------START BUTTON--------------------------------------------------- */
+.newgame {
+  margin-right: 3%;
+  display: block;
+  width: 80px;
+  height: 80px;
   position: relative;
-  transition: all 0.3s;
+  transform-style: preserve-3d;
+  border-radius: 50%;
+  background: #fcc96b;
+  background: #fcc96b;
+  background: linear-gradient(
+    180deg,
+    #fcc96b 0%,
+    #fcc96b 15%,
+    #f7ae01 15%,
+    #f7ae01 19%,
+    #fcc96b 19%,
+    #fcc96b 22%,
+    #f7ae01 22%,
+    #f7ae01 28%,
+    #fcc96b 28%,
+    #fcc96b 31%,
+    #fcc96b 33%,
+    #fcc96b 36%,
+    #f7ae01 36%,
+    #f7ae01 48%,
+    #fcc96b 48%,
+    #fcc96b 55%,
+    #f7ae01 55%,
+    #f7ae01 66%,
+    #fcc96b 66%,
+    #fcc96b 70%,
+    #f7ae01 70%,
+    #f7ae01 73%,
+    #fcc96b 73%,
+    #fcc96b 82%,
+    #f7ae01 82%,
+    #c7ba9d 86%,
+    #fcc96b 86%
+  );
+  box-shadow: inset 0 0 25px rgba(0, 0, 0, 0.25),
+    inset 8px -4px 6px rgba(199, 128, 0, 0.5),
+    inset -8px 4px 8px rgba(255, 235, 199, 0.5), inset 20px -5px 12px #f7ae01,
+    0 0 100px #ffffff59;
+  transform: rotateZ(-15deg);
 }
-.weiterbutton::after {
-  pointer-events: none;
-  content: "";
+
+.newgame::before {
   position: absolute;
-  top: 120%;
-  left: 0;
-  height: 100%;
+  content: "";
+  display: block;
   width: 100%;
-  background-color: var(--glow-spread-color);
-  filter: blur(2em);
-  opacity: 0.7;
-  transform: perspective(1.5em) rotateX(35deg) scale(1, 0.6);
+  height: 50%;
+  box-sizing: border-box;
+  border: 16px solid #e1a519;
+  border-top-width: 0;
+  border-radius: 50%;
+  box-shadow: 0 -2px 0 #c18620;
+  animation: rings1 0.8s infinite linear;
 }
 
-.weiterbutton:hover {
-  color: var(--btn-color);
-  background-color: var(--glow-color);
-  box-shadow: 0 0 1em 0.25em var(--glow-color),
-    0 0 4em 2em var(--glow-spread-color),
-    inset 0 0 0.75em 0.25em var(--glow-color);
+@keyframes rings1 {
+  0% {
+    transform: rotateX(65deg) rotateZ(0deg) scale(1.75);
+  }
+
+  100% {
+    transform: rotateX(65deg) rotateZ(360deg) scale(1.75);
+  }
+}
+/* ------------------STOP BUTTON--------------------------------------------------- */
+.stopgame {
+  margin-left: 3%;
+  display: block;
+  width: 80px;
+  height: 80px;
+  position: relative;
+  transform-style: preserve-3d;
+  border-radius: 50%;
+  background: #fcc96b;
+  background: #fcc96b;
+  background: linear-gradient(
+    180deg,
+    #fcc96b 0%,
+    #fcc96b 15%,
+    #f7ae01 15%,
+    #f7ae01 19%,
+    #fcc96b 19%,
+    #fcc96b 22%,
+    #f7ae01 22%,
+    #f7ae01 28%,
+    #fcc96b 28%,
+    #fcc96b 31%,
+    #fcc96b 33%,
+    #fcc96b 36%,
+    #f7ae01 36%,
+    #f7ae01 48%,
+    #fcc96b 48%,
+    #fcc96b 55%,
+    #f7ae01 55%,
+    #f7ae01 66%,
+    #fcc96b 66%,
+    #fcc96b 70%,
+    #f7ae01 70%,
+    #f7ae01 73%,
+    #fcc96b 73%,
+    #fcc96b 82%,
+    #f7ae01 82%,
+    #c7ba9d 86%,
+    #fcc96b 86%
+  );
+  box-shadow: inset 0 0 25px rgba(0, 0, 0, 0.25),
+    inset 8px -4px 6px rgba(199, 128, 0, 0.5),
+    inset -8px 4px 8px rgba(255, 235, 199, 0.5), inset 20px -5px 12px #f7ae01,
+    0 0 100px #ffffff59;
+  transform: rotateZ(-15deg);
 }
 
-button:active {
-  box-shadow: 0 0 0.6em 0.25em var(--glow-color),
-    0 0 2.5em 2em var(--glow-spread-color),
-    inset 0 0 0.5em 0.25em var(--glow-color);
+.stopgame::before {
+  position: absolute;
+  content: "";
+  display: block;
+  width: 100%;
+  height: 50%;
+  box-sizing: border-box;
+  border: 16px solid #e1a519;
+  border-top-width: 0;
+  border-radius: 50%;
+  box-shadow: 0 -2px 0 #c18620;
+  animation: rings1 0.8s infinite linear;
 }
+
+@keyframes rings1 {
+  0% {
+    transform: rotateX(65deg) rotateZ(0deg) scale(1.75);
+  }
+
+  100% {
+    transform: rotateX(65deg) rotateZ(360deg) scale(1.75);
+  }
+}
+
+/* -------------------------------------------------------------------------------- */
 /* ---------------------HINTERGRUND springende Bälle----------------------------------- */
 .ball {
   position: fixed;
