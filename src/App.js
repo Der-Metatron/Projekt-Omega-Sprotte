@@ -28,7 +28,7 @@ function App() {
             autoPlay
             controls
             loop
-            volume={0.0}
+            volume={0.4}
           />
           <GameCanvas />
           <Footer />
