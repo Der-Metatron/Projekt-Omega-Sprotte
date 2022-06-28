@@ -68,7 +68,8 @@ export const Welcome = ({ onContinue }) => {
             <p>
               Idee: Der Metatron. Programming: Der Metatron, Serdar, Dennis.
               Musik & Sound: Der Metatron. Grafik: Emergancy-Romm Tattoo,
-              Pixbay, Der Metatron. Backend: Serdar. Canvas build React: Ralf.
+              Pixbay, Der Metatron. Backend & Frontend: Der Metatron. Canvas
+              build React: Ralf & Der Metatron.
             </p>
             <p>Erstellt mit: Canvas, Html, Reackt, MongoDb, Express, Css.</p>
             <p>
