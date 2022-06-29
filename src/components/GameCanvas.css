@@ -11,6 +11,15 @@ canvas {
 }
 
 .punkte {
+  font-family: "Alfa Slab One", cursive;
+
+  font-family: "Atomic Age", cursive;
+
+  font-family: "Aubrey", cursive;
+
+  font-family: "Goldman", cursive;
+
+  font-family: "Orbitron", sans-serif;
   color: #e1a519;
   font-size: 2rem;
   font-weight: bolder;

@@ -1,40 +1,23 @@
-import React from "react";
+import React, { useState } from "react";
 
-function Highscore() {
-  return <div>Highscore</div>;
-}
-
-export default Highscore;
-class HighScore extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = { value: "" };
-    this.handleChange = this.handleChange.bind(this);
-    this.handleSubmit = this.handleSubmit.bind(this);
-  }
-
-  handleChange(event) {
-    this.setState({ value: event.target.value });
-  }
-  handleSubmit(event) {
-    alert("Ein Name wurde abgeschickt: " + this.state.value);
+function App() {
+  const [message, setMessage] = useState(""); /* Quelle der Wahrheit */
+  const handleChange = (event) => {
+    setMessage(event.target.value);
+  };
+  const handleSubmit = (event) => {
     event.preventDefault();
-  }
+    alert(`wurde abgeschickt: ${message}`);
+  };
 
-  render() {
-    return (
-      <form onSubmit={this.handleSubmit}>
-        {" "}
-        <label>
-          Name:
-          <input
-            type="text"
-            value={this.state.value}
-            onChange={this.handleChange}
-          />{" "}
-        </label>
-        <input type="submit" value="Absenden" />
-      </form>
-    );
-  }
+  return (
+    <form onSubmit={handleSubmit}>
+      <label>Highscore:</label>
+      <textarea value={message} onChange={handleChange} />
+
+      <input type="submit" value="Absenden" />
+    </form>
+  );
 }
+
+export default App;
