@@ -221,7 +221,7 @@ export const GameControl = (context) => {
     "keydown",
     function (e) {
       let key = e.keyCode - 32;
-
+      /* ------------------------------TEST SOUND------------------------------------------ */
       if (currentKey !== key)
         p.innerHTML =
           "<audio autoplay='autoplay' src='button" +
@@ -232,6 +232,7 @@ export const GameControl = (context) => {
     },
     false
   );
+  /* ------------------------------------------------------------------------------------ */
 
   document.addEventListener(
     "keyup",
@@ -241,8 +242,8 @@ export const GameControl = (context) => {
     },
     false
   );
-  /* --------------------------------------------------------------------------- */
 
+  /* -------------------------Gehe zu Commponente 3 ?????-------------------------- */
   const gameOver = () => {
     clearIntervals();
     gameStarted = false;
