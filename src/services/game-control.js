@@ -60,7 +60,7 @@ export const GameControl = (context) => {
     /*  ufos1.forEach(function (ufo1) {
       ctx.drawImage(ufo1.img, ufo1.x, ufo1.y, ufo1.width, ufo1.height);
     }); */
-    /* --------------------------------------------------------------------------- */
+    /* --------------------Schuss funktion. (use Audio???----------------------- */
     shots.forEach(function (shot) {
       ctx.drawImage(shot.img, shot.x, shot.y, shot.width, shot.height);
     });
