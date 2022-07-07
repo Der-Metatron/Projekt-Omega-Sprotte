@@ -79,8 +79,8 @@ export const Welcome = ({ onContinue }) => {
             <p>
               Danke an alle die uns bei diesen Projekt unterstützt haben und uns
               die gelegenheit gegeben haben unser Ideen zu verwirklichen.
-              Special Thanks to Ralf, Edward & Chriatian. Und jetzt viel Spaß
-              beim Zocken!!!
+              Special Thanks to Vens, Ralf, Edward & Chriatian. Und jetzt viel
+              Spaß beim Zocken!!!
             </p>
             <h2>
               Pfeil Taste Oben, Pfeil Taste Unten, Pfeil Taste Links, Pfeil

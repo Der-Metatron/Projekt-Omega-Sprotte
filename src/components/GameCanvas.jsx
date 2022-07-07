@@ -38,7 +38,16 @@ export const GameCanvas = () => {
     });
     gameControl.current.startGame();
   }, []);
-
+  /* -------------------------venz------------------------------------------------------------- */
+  const [nameGamer, setNameGamer] = useState();
+  const [userCreate, setUserCreate] = useState([]);
+  const handleChange = (i) => {
+    setUserCreate({
+      ...userCreate,
+      [i.target.nameGamer]: i.target.value,
+      [i.target.highScore]: i.target.value,
+    });
+  };
   return (
     <>
       {" "}
@@ -78,16 +87,36 @@ export const GameCanvas = () => {
         >
           Stop Game
         </button>
-        {/* ----------------Button Start------------------------------------ */}
-        <button
-          className="newgame"
-          onClick={() => {
-            play1();
-            gameControl.current.startGame();
-          }}
-        >
-          New Game
-        </button>
+        {/* -------------------Input Feld ab 1000 Punkte------------------------------------- */}
+        {score > 1000 ? (
+          <form className="eintrag" onSubmit={(i) => handleChange(i)}>
+            <input
+              name="nameGamer"
+              value={nameGamer}
+              item="nameGamer"
+              placeholder="Trage deinen Namen ein"
+            />
+            <button
+              className="newgame"
+              onClick={() => {
+                play1();
+                gameControl.current.startGame();
+              }}
+            >
+              New Game
+            </button>
+          </form>
+        ) : (
+          <button
+            className="newgame"
+            onClick={() => {
+              play1();
+              gameControl.current.startGame();
+            }}
+          >
+            New Game
+          </button>
+        )}
       </div>
       {/* Muss noch eine Routine Geschrieben werden. */}
       {/* <p>{message}</p>  */}{" "}
