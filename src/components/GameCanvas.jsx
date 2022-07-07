@@ -2,6 +2,16 @@ import React, { useRef, useEffect, useState } from "react";
 import { GameControl } from "../services/game-control";
 import ReactAudioPlayer from "react-audio-player";
 import "./GameCanvas.css";
+/* ---------------------USE SOUND LASER------------------------------ */
+import useSound from "use-sound";
+import boopSfx from "../asset/sound/Laser.mp3";
+
+const BoopButton = () => {
+  const [play] = useSound(boopSfx);
+
+  return <button onClick={play}>Boop!</button>;
+};
+/* ------------------------------------------------------------------- */
 
 export const GameCanvas = () => {
   const [score, setScore] = useState(0);
