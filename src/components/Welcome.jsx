@@ -2,6 +2,9 @@ import React from "react";
 import "./Welcome.css";
 import ReactAudioPlayer from "react-audio-player";
 
+import useSound from "use-sound";
+import boopSfx from "../asset/sound/Arlarm.mp3";
+
 function randomPosition() {
   let y = window.innerWidth;
   let x = window.innerHeight;
@@ -11,6 +14,7 @@ function randomPosition() {
 }
 
 export const Welcome = ({ onContinue }) => {
+  const [play] = useSound(boopSfx);
   const starDivs = [];
   for (let i = 0; i < 400; i++) {
     let xy = randomPosition();
@@ -97,6 +101,7 @@ export const Welcome = ({ onContinue }) => {
           <button
             className="startbutton"
             onClick={() => {
+              play(); /* AUDIO BUTTON */
               onContinue();
             }}
           >

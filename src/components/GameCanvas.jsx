@@ -5,15 +5,15 @@ import "./GameCanvas.css";
 /* ---------------------USE SOUND LASER------------------------------ */
 import useSound from "use-sound";
 import boopSfx from "../asset/sound/Laser.mp3";
-
-const BoopButton = () => {
-  const [play] = useSound(boopSfx);
-
-  return <button onClick={play}>Boop!</button>;
-};
-/* ------------------------------------------------------------------- */
+import boopSfx1 from "../asset/sound/Button1.mp3";
+import boopSfx2 from "../asset/sound/Button.mp3";
 
 export const GameCanvas = () => {
+  /* -----------USE SOUND-------------------------------------------- */
+  const [play] = useSound(boopSfx);
+  const [play1] = useSound(boopSfx1);
+  const [play2] = useSound(boopSfx2);
+  /* -------------SCORE------------------------------------------------ */
   const [score, setScore] = useState(0);
   // eslint-disable-next-line no-unused-vars
   const [message, setMessage] = useState("");
@@ -42,7 +42,12 @@ export const GameCanvas = () => {
   return (
     <>
       {" "}
-      <div className="oben">
+      <div
+        className="oben"
+        onKeyDown={(e) => {
+          console.log("tastedrück:", e.target);
+        }}
+      >
         <ReactAudioPlayer
           className="player"
           src="/audio/Musik/titel 1.mp3"
@@ -51,6 +56,7 @@ export const GameCanvas = () => {
           loop
           volume={0.4}
         />
+        <button onClick={play}>Boop!</button>
         <p className="punkte">Score: {score}</p>{" "}
         {/* Angezeigter Punktezähler */}
       </div>
@@ -66,17 +72,17 @@ export const GameCanvas = () => {
         <button
           className="stopgame"
           onClick={() => {
+            play2();
             gameControl.current.endGame();
           }}
         >
           Stop Game
         </button>
-
         {/* ----------------Button Start------------------------------------ */}
-
         <button
           className="newgame"
           onClick={() => {
+            play1();
             gameControl.current.startGame();
           }}
         >
