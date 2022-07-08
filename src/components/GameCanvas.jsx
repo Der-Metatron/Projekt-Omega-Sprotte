@@ -2,7 +2,7 @@ import React, { useRef, useEffect, useState } from "react";
 import { GameControl } from "../services/game-control";
 import ReactAudioPlayer from "react-audio-player";
 import "./GameCanvas.css";
-/* ---------------------USE SOUND LASER------------------------------ */
+/* ---------------------USE SOUND werden geladen------------------------------ */
 import useSound from "use-sound";
 import boopSfx from "../asset/sound/Laser.mp3";
 import boopSfx1 from "../asset/sound/Button1.mp3";
@@ -20,13 +20,14 @@ export const GameCanvas = () => {
   const [message, setMessage] = useState("");
   const canvasRef = useRef(null);
   const gameControl = useRef(null);
+  /* -------------Sound auf Leertaste-------------------------------------- */
   const handleKeyDown = (e) => {
     console.log(e.key);
-    if (e.key === " ") {
+    if (e.keyCode === 32) {
       play();
     }
   };
-
+  /* -------------------------------------------------------------------------- */
   useEffect(() => {
     const canvas = canvasRef.current;
     const context = canvas.getContext("2d");
@@ -70,7 +71,7 @@ export const GameCanvas = () => {
           volume={0.4}
         />
         {/* -------------------Laser Test Button---------------------------------- */}
-        {/*  <button onClick={play}>Boop!</button> */}
+        {/*   <button onClick={play}>Boop!</button> */}
         {/* ------------------PunkteZähler------------------------------------------ */}
         <p className="punkte">Score: {score}</p>{" "}
         {/* Angezeigter Punktezähler */}
