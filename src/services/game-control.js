@@ -1,3 +1,4 @@
+/* -----------------------KEYS----------------------------------------------- */
 const KeysToWatch = [
   "Space",
   "ArrowUp",
@@ -18,7 +19,7 @@ document.addEventListener("keyup", (e) => {
     KeyStates[e.code] = false;
   }
 });
-
+/* ---------------------------------------------------------------------------- */
 export const GameControl = (context) => {
   const ctx = context;
   let eventListeners = [];
@@ -69,7 +70,7 @@ export const GameControl = (context) => {
       requestAnimationFrame(draw);
     }
   };
-
+  /* -------------------------KEYS------------------------------------------------- */
   const update = () => {
     if (KeyStates.ArrowUp) {
       rocket.y -= 6;

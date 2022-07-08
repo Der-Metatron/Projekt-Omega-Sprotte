@@ -14,11 +14,18 @@ export const GameCanvas = () => {
   const [play1] = useSound(boopSfx1);
   const [play2] = useSound(boopSfx2);
   /* -------------SCORE------------------------------------------------ */
+
   const [score, setScore] = useState(0);
   // eslint-disable-next-line no-unused-vars
   const [message, setMessage] = useState("");
   const canvasRef = useRef(null);
   const gameControl = useRef(null);
+  const handleKeyDown = (e) => {
+    console.log(e.key);
+    if (e.key === " ") {
+      play();
+    }
+  };
 
   useEffect(() => {
     const canvas = canvasRef.current;
@@ -38,7 +45,7 @@ export const GameCanvas = () => {
     });
     gameControl.current.startGame();
   }, []);
-  /* -------------------------venz------------------------------------------------------------- */
+  /* -------------------Input Punktezähler für Backend------------------------------------------ */
   const [nameGamer, setNameGamer] = useState();
   const [userCreate, setUserCreate] = useState([]);
   const handleChange = (i) => {
@@ -51,12 +58,9 @@ export const GameCanvas = () => {
   return (
     <>
       {" "}
-      <div
-        className="oben"
-        onKeyDown={(e) => {
-          console.log("tastedrück:", e.target);
-        }}
-      >
+      {/* ----------------------------TASTE SOUND------------------------------------------ */}
+      <div className="oben" onKeyDown={(e) => handleKeyDown(e)}>
+        {/* --------------------Spiel Hintergrundmusik----------------------------- */}
         <ReactAudioPlayer
           className="player"
           src="/audio/Musik/titel 1.mp3"
@@ -65,7 +69,9 @@ export const GameCanvas = () => {
           loop
           volume={0.4}
         />
-        <button onClick={play}>Boop!</button>
+        {/* -------------------Laser Test Button---------------------------------- */}
+        {/*  <button onClick={play}>Boop!</button> */}
+        {/* ------------------PunkteZähler------------------------------------------ */}
         <p className="punkte">Score: {score}</p>{" "}
         {/* Angezeigter Punktezähler */}
       </div>
