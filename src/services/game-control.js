@@ -160,6 +160,7 @@ export const GameControl = (context) => {
           setTimeout(() => {
             ufos = ufos.filter((u) => u !== ufo);
           }, 2000);
+          fireEvent("treffer");
         }
       });
     });
