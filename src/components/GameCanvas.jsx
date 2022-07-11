@@ -81,7 +81,7 @@ export const GameCanvas = () => {
         {/* --------------------Spiel Hintergrundmusik----------------------------- */}
         <ReactAudioPlayer
           className="player"
-          src="/audio/Musik/titel 1.mp3"
+          src="/audio/Musik/Alien.mp3"
           autoPlay
           controls
           loop
