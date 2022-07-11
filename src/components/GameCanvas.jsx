@@ -77,7 +77,7 @@ export const GameCanvas = () => {
           autoPlay
           controls
           loop
-          volume={0.2} /* Musik Lautstärke */
+          volume={0.5} /* Musik Lautstärke */
         />
         {/* -------------------Laser Test Button---------------------------------- */}
         {/*   <button onClick={play}>Boop!</button> */}
