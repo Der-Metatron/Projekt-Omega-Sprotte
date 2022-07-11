@@ -47,6 +47,7 @@ export const GameCanvas = () => {
     gameControl.current.startGame();
   }, []);
   /* -------------------Input Punktezähler für Backend------------------------------------------ */
+  // eslint-disable-next-line no-unused-vars
   const [nameGamer, setNameGamer] = useState();
   const [userCreate, setUserCreate] = useState([]);
   const handleChange = (i) => {
@@ -60,7 +61,7 @@ export const GameCanvas = () => {
     <>
       {" "}
       {/* ----------------------------TASTE SOUND------------------------------------------ */}
-      <div className="oben" onKeyDown={(e) => handleKeyDown(e)}>
+      <div onKeyDown={(e) => handleKeyDown(e)}>
         {/* --------------------Spiel Hintergrundmusik----------------------------- */}
         <ReactAudioPlayer
           className="player"
@@ -68,13 +69,12 @@ export const GameCanvas = () => {
           autoPlay
           controls
           loop
-          volume={0.4}
+          volume={0.2} /* Musik Lautstärke */
         />
         {/* -------------------Laser Test Button---------------------------------- */}
         {/*   <button onClick={play}>Boop!</button> */}
         {/* ------------------PunkteZähler------------------------------------------ */}
         <p className="punkte">Score: {score}</p>{" "}
-        {/* Angezeigter Punktezähler */}
       </div>
       {/* -----------------Größe desCanvas-------------------------------------- */}
       <canvas

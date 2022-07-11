@@ -61,7 +61,7 @@ export const GameControl = (context) => {
     /*  ufos1.forEach(function (ufo1) {
       ctx.drawImage(ufo1.img, ufo1.x, ufo1.y, ufo1.width, ufo1.height);
     }); */
-    /* --------------------Schuss funktion. (use Audio???----------------------- */
+    /* --------------------Schuss funktion------------------------------- */
     shots.forEach(function (shot) {
       ctx.drawImage(shot.img, shot.x, shot.y, shot.width, shot.height);
     });
@@ -213,10 +213,8 @@ export const GameControl = (context) => {
         img: new Image(),
       };
       shot.img.src = shot.src; // Laser-Bild wird geladen.
-      /* ----------------------Laser Sound--------------------------------- */
+      /* ------------------------------------------------------- */
       shots.push(shot);
-      const laserSound = new Audio("../asset/sound/Laser.mp3");
-      laserSound.play();
     }
   };
 
@@ -248,7 +246,7 @@ export const GameControl = (context) => {
   const startIntervals = () => {
     clearIntervals();
     intervals.update = setInterval(update, 800 / 25); /* schneller Fliegen */
-    intervals.createUfos = setInterval(createUfos, 1000); /*feinde schneller*/
+    intervals.createUfos = setInterval(createUfos, 1000); /*feinde Öffter*/
     intervals.checkForCollision = setInterval(checkForCollision, 1000 / 25);
     intervals.checkForShoot = setInterval(checkForShoot, 1000 / 10);
   };
