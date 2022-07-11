@@ -28,7 +28,7 @@ export const GameControl = (context) => {
   const intervals = {
     update: null,
     createUfos: null,
-    /* createUfos1: null, */
+    createUfos1: null /* test */,
     checkForCollision: null,
     checkForShoot: null,
   };
@@ -41,7 +41,7 @@ export const GameControl = (context) => {
     src: "img/ufo1.png",
   };
   let ufos = [];
-  /*   let ufos1 = [];  */
+  let ufos1 = []; /* test */
   let shots = [];
   /* ------------------Background Bild--------------------------------------- */
   const loadImages = () => {
@@ -58,9 +58,9 @@ export const GameControl = (context) => {
       ctx.drawImage(ufo.img, ufo.x, ufo.y, ufo.width, ufo.height);
     });
     /* --------------------Feinde test------------------------------------- */
-    /*  ufos1.forEach(function (ufo1) {
+    ufos1.forEach(function (ufo1) {
       ctx.drawImage(ufo1.img, ufo1.x, ufo1.y, ufo1.width, ufo1.height);
-    }); */
+    });
     /* --------------------Schuss funktion------------------------------- */
     shots.forEach(function (shot) {
       ctx.drawImage(shot.img, shot.x, shot.y, shot.width, shot.height);
@@ -91,11 +91,11 @@ export const GameControl = (context) => {
       }
     });
     /* ------------Feinde test------------------------------ */
-    /*  ufos1.forEach(function (ufo1) {
+    ufos1.forEach(function (ufo1) {
       if (!ufo1.hit) {
         ufo1.x -= 5;
       }
-    }); */
+    });
     /* --------------------------------------------------------- */
     shots.forEach(function (shot) {
       shot.x += 15;
@@ -116,18 +116,18 @@ export const GameControl = (context) => {
     ufos.push(ufo);
   };
   /* -------------------------Test neue Feinde-------------------------------------- */
-  /*   const createUfos1 = () => {
+  const createUfos1 = () => {
     let ufo1 = {
       x: 800,
-      y: Math.random() * 500, 
+      y: Math.random() * 500,
       width: 100,
       height: 40,
-      src: "/img/spaceship-g2c5115d52_1280.png" 
+      src: "/img/ufo5.png",
       img: new Image(),
     };
-    ufo1.img.src = ufo1.src; 
+    ufo1.img.src = ufo1.src;
     ufos.push(ufo1);
-  }; */
+  };
   /* ------------------------------------------------------------------------------------- */
   const checkForCollision = () => {
     ufos.forEach(function (ufo) {
@@ -166,39 +166,40 @@ export const GameControl = (context) => {
     });
   };
   /* ------------Feinde test---------------------------------------------- */
-  /*  const checkForCollision1 = () => {
-      ufos1.forEach(function (ufo1) {
-        // Kontrollieren, ob UFO mit Rakete kollidiert
+  // eslint-disable-next-line no-unused-vars
+  const checkForCollision1 = () => {
+    ufos1.forEach(function (ufo1) {
+      // Kontrollieren, ob UFO mit Rakete kollidiert
+      if (
+        rocket.x + rocket.width > ufo1.x &&
+        rocket.y + rocket.height > ufo1.y &&
+        rocket.x < ufo1.x &&
+        rocket.y < ufo1.y + ufo1.height
+      ) {
+        rocket.img.src = "img/boom3.png";
+        console.log("Collion!!!");
+        ufos1 = ufos1.filter((u) => u !== ufo1);
+        gameOver();
+      }
+      shots.forEach(function (shot) {
+        // Kontrollieren, ob Laser mit Rakete kollidiert
         if (
-          rocket.x + rocket.width > ufo1.x &&
-          rocket.y + rocket.height > ufo1.y &&
-          rocket.x < ufo1.x &&
-          rocket.y < ufo1.y + ufo1.height
+          shot.x + shot.width > ufo1.x &&
+          shot.y + shot.height > ufo1.y &&
+          shot.x < ufo1.x &&
+          shot.y < ufo1.y + ufo1.height
         ) {
-          rocket.img.src = "img/boom3.png";
-          console.log("Collion!!!");
-          ufos1 = ufos1.filter((u) => u !== ufo1);
-          gameOver();
+          ufo1.hit = true;
+          ufo1.img.src = "img/boom3.png";
+          console.log("Collision!!!");
+          increaseScore(10);
+          setTimeout(() => {
+            ufos1 = ufos1.filter((u) => u !== ufo1);
+          }, 2000);
         }
-        shots.forEach(function (shot) {
-          // Kontrollieren, ob Laser mit Rakete kollidiert
-          if (
-            shot.x + shot.width > ufo1.x &&
-            shot.y + shot.height > ufo1.y &&
-            shot.x < ufo1.x &&
-            shot.y < ufo1.y + ufo1.height
-          ) {
-            ufo1.hit = true;
-            ufo1.img.src = "img/boom3.png";
-            console.log("Collision!!!");
-            increaseScore(10);
-            setTimeout(() => {
-              ufos1 = ufos1.filter((u) => u !== ufo1);
-            }, 2000);
-          }
-        });
       });
-    }; */
+    });
+  };
   /* --------------------------------------------------------------------- */
 
   /* Space Taste */
@@ -249,6 +250,7 @@ export const GameControl = (context) => {
     clearIntervals();
     intervals.update = setInterval(update, 800 / 25); /* schneller Fliegen */
     intervals.createUfos = setInterval(createUfos, 1000); /*feinde Öffter*/
+    intervals.createUfos1 = setInterval(createUfos1, 1200); /*feinde Öffter*/
     intervals.checkForCollision = setInterval(checkForCollision, 1000 / 25);
     intervals.checkForShoot = setInterval(checkForShoot, 1000 / 10);
   };
@@ -263,7 +265,7 @@ export const GameControl = (context) => {
     rocket.x = 50;
     rocket.y = 200;
     ufos = [];
-    /*  ufos1 = []; */ /* feind test */
+    ufos1 = []; /* feind test */
     shots = [];
     loadImages();
     clearIntervals();
