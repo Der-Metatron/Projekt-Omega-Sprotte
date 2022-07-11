@@ -123,7 +123,6 @@ export const GameControl = (context) => {
       width: 100,
       height: 40,
       src: "/img/spaceship-g2c5115d52_1280.png" 
-
       img: new Image(),
     };
     ufo1.img.src = ufo1.src; 
@@ -139,11 +138,11 @@ export const GameControl = (context) => {
         rocket.x < ufo.x &&
         rocket.y < ufo.y + ufo.height
       ) {
-        rocket.img.src = "img/boom1.png";
+        rocket.img.src = "img/boom3.png";
         console.log("Collion!!!");
         ufos = ufos.filter((u) => u !== ufo);
         gameOver();
-        fireEvent("koliediert");
+        fireEvent("kolision");
       }
 
       shots.forEach(function (shot) {
@@ -155,7 +154,7 @@ export const GameControl = (context) => {
           shot.y < ufo.y + ufo.height
         ) {
           ufo.hit = true;
-          ufo.img.src = "img/explo2.png";
+          ufo.img.src = "img/boom3.png";
           console.log("Collision!!!");
           increaseScore(10);
           setTimeout(() => {
@@ -181,7 +180,6 @@ export const GameControl = (context) => {
           ufos1 = ufos1.filter((u) => u !== ufo1);
           gameOver();
         }
-
         shots.forEach(function (shot) {
           // Kontrollieren, ob Laser mit Rakete kollidiert
           if (

@@ -45,7 +45,7 @@ export const GameCanvas = () => {
             play3();
           }
           break;
-        case "koliediert":
+        case "kolision":
           if (play4) {
             play4();
           }
