@@ -139,10 +139,11 @@ export const GameControl = (context) => {
         rocket.x < ufo.x &&
         rocket.y < ufo.y + ufo.height
       ) {
-        rocket.img.src = "img/boom3.png";
+        rocket.img.src = "img/boom1.png";
         console.log("Collion!!!");
         ufos = ufos.filter((u) => u !== ufo);
         gameOver();
+        fireEvent("koliediert");
       }
 
       shots.forEach(function (shot) {
@@ -154,7 +155,7 @@ export const GameControl = (context) => {
           shot.y < ufo.y + ufo.height
         ) {
           ufo.hit = true;
-          ufo.img.src = "img/boom3.png";
+          ufo.img.src = "img/explo2.png";
           console.log("Collision!!!");
           increaseScore(10);
           setTimeout(() => {
