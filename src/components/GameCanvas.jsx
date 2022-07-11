@@ -21,12 +21,7 @@ export const GameCanvas = () => {
   const canvasRef = useRef(null);
   const gameControl = useRef(null);
   /* -------------Sound auf Leertaste-------------------------------------- */
-  const handleKeyDown = (e) => {
-    console.log(e.key);
-    if (e.keyCode === 32) {
-      play();
-    }
-  };
+
   /* -------------------------------------------------------------------------- */
   useEffect(() => {
     const canvas = canvasRef.current;
@@ -40,12 +35,18 @@ export const GameCanvas = () => {
         case "game_over":
           setMessage("Game Over!");
           break;
+        case "laser":
+          if (play) {
+            play();
+          }
+
+          break;
         default:
           break;
       }
     });
     gameControl.current.startGame();
-  }, []);
+  }, [play]);
   /* -------------------Input Punktezähler für Backend------------------------------------------ */
   // eslint-disable-next-line no-unused-vars
   const [nameGamer, setNameGamer] = useState();
@@ -61,7 +62,7 @@ export const GameCanvas = () => {
     <>
       {" "}
       {/* ----------------------------TASTE SOUND------------------------------------------ */}
-      <div onKeyDown={(e) => handleKeyDown(e)}>
+      <div className="oben">
         {/* --------------------Spiel Hintergrundmusik----------------------------- */}
         <ReactAudioPlayer
           className="player"

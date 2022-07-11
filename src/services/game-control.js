@@ -215,10 +215,12 @@ export const GameControl = (context) => {
       shot.img.src = shot.src; // Laser-Bild wird geladen.
       /* ------------------------------------------------------- */
       shots.push(shot);
+      fireEvent("laser");
     }
   };
 
   /* -------------------------Gehe zu Commponente 3 ?????-------------------------- */
+
   const gameOver = () => {
     clearIntervals();
     gameStarted = false;
