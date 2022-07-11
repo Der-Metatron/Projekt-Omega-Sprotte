@@ -111,7 +111,7 @@ export const GameCanvas = () => {
           Stop Game
         </button>
         {/* -------------------Input Feld ab 1000 Punkte------------------------------------- */}
-        {score > 1000 ? (
+        {score > 10000 ? (
           <form className="eintrag" onSubmit={(i) => handleChange(i)}>
             <input
               name="nameGamer"

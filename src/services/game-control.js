@@ -38,7 +38,7 @@ export const GameControl = (context) => {
     y: 200,
     width: 100,
     height: 50,
-    src: "img/ufo1.png",
+    src: "img/omega1.png",
   };
   let ufos = [];
   let ufos1 = []; /* test */
@@ -122,7 +122,7 @@ export const GameControl = (context) => {
       y: Math.random() * 500,
       width: 100,
       height: 40,
-      src: "/img/ufo5.png",
+      src: "/img/ufo4.png",
       img: new Image(),
     };
     ufo1.img.src = ufo1.src;
