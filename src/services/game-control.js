@@ -38,7 +38,7 @@ export const GameControl = (context) => {
     y: 200,
     width: 100,
     height: 50,
-    src: "img/omega1.png",
+    src: "img/omega.png" /* Omega-Bild */,
   };
   let ufos = [];
   let ufos1 = []; /* test */
