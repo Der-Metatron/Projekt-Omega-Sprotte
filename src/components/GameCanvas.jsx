@@ -9,6 +9,7 @@ import boopSfx1 from "../asset/sound/Button1.mp3";
 import boopSfx2 from "../asset/sound/Button.mp3";
 import boopSfx3 from "../asset/sound/Boom.mp3";
 import boopSfx4 from "../asset/sound/Explo.mp3";
+import boopSfx5 from "../asset/sound/Maschingun.mp3";
 
 export const GameCanvas = () => {
   /* -----------USE SOUND-------------------------------------------- */
@@ -17,6 +18,7 @@ export const GameCanvas = () => {
   const [play2] = useSound(boopSfx2);
   const [play3] = useSound(boopSfx3);
   const [play4] = useSound(boopSfx4);
+  const [play5] = useSound(boopSfx5);
   /* -------------SCORE------------------------------------------------ */
 
   const [score, setScore] = useState(0);
@@ -56,14 +58,18 @@ export const GameCanvas = () => {
           if (play) {
             play();
           }
-
+          /*      break;
+        case "laser1":
+          if (play5) {
+            play5();
+          } */
           break;
         default:
           break;
       }
     });
     gameControl.current.startGame();
-  }, [play, play3, play4]); /* Sound Commponenten */
+  }, [play, play3, play4, play5]); /* Sound Commponenten */
   /* -------------------Input Punktezähler für Backend------------------------------------------ */
   // eslint-disable-next-line no-unused-vars
   const [nameGamer, setNameGamer] = useState();
