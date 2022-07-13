@@ -20,12 +20,13 @@ export const GameCanvas = () => {
   /* -------------SCORE------------------------------------------------ */
 
   const [score, setScore] = useState(0);
+
   // eslint-disable-next-line no-unused-vars
   const [message, setMessage] = useState("");
   const canvasRef = useRef(null);
   const gameControl = useRef(null);
-  /* -------------Sound auf Leertaste-------------------------------------- */
-
+  /* -------------------------------------------------------------------------- */
+  /*   const [nextSite, setNextSite] = useState(0);  */
   /* -------------------------------------------------------------------------- */
   useEffect(() => {
     const canvas = canvasRef.current;
@@ -39,6 +40,7 @@ export const GameCanvas = () => {
         case "game_over":
           setMessage("Game Over!");
           break;
+
         /* -------------------Sound bei------------------------------------------ */
         case "treffer":
           if (play3) {
@@ -76,7 +78,6 @@ export const GameCanvas = () => {
   return (
     <>
       {" "}
-      {/* ----------------------------TASTE SOUND------------------------------------------ */}
       <div className="oben">
         {/* --------------------Spiel Hintergrundmusik----------------------------- */}
         <ReactAudioPlayer
