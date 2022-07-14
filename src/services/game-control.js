@@ -34,7 +34,7 @@ export const GameControl = (context) => {
     checkForCollision1: null,
     checkForCollision2: null,
     checkForShoot: null,
-    /*     checkForShoot1: null , */
+    checkForShoot1: null,
   };
   let backgroundImage = new Image();
   let rocket = {
@@ -48,7 +48,7 @@ export const GameControl = (context) => {
   let ufos1 = []; /* test */
   let ufos2 = []; /* test */
   let shots = [];
-  /*   let shots1 = [];  */
+  let shots1 = [];
   /* ------------------Background Bild--------------------------------------- */
   const loadImages = () => {
     backgroundImage.src = "img/- WALLPAPER - (276).jpg";
@@ -65,7 +65,8 @@ export const GameControl = (context) => {
     });
     /* --------------------Feinde test1------------------------------------- */
     ufos1.forEach(function (ufo1) {
-      ctx.drawImage(ufo1.img, ufo1.x, ufo1.y, ufo1.width, ufo1.height);
+      if (score > 2000)
+        ctx.drawImage(ufo1.img, ufo1.x, ufo1.y, ufo1.width, ufo1.height);
     });
     /* --------------------Feinde test2------------------------------------- */
     ufos1.forEach(function (ufo2) {
@@ -76,9 +77,10 @@ export const GameControl = (context) => {
       ctx.drawImage(shot.img, shot.x, shot.y, shot.width, shot.height);
     });
     /* --------------------Schuss funktion1------------------------------- */
-    /*  shots1.forEach(function (shot1) {
-      ctx.drawImage(shot1.img, shot1.x, shot1.y, shot1.width, shot1.height);
-    }); */
+    shots1.forEach(function (shot1) {
+      if (score > 1000)
+        ctx.drawImage(shot1.img, shot1.x, shot1.y, shot1.width, shot1.height);
+    });
 
     if (gameStarted) {
       requestAnimationFrame(draw);
@@ -121,9 +123,9 @@ export const GameControl = (context) => {
       shot.x += 15;
     });
     /* ---------------------Shot1 test--------------------------- */
-    /*  shots1.forEach(function (shot1) {
+    shots1.forEach(function (shot1) {
       shot1.x += 15;
-    }); */
+    });
   };
 
   /* ---------------------------Routine der Feinde------------------------------------ */
@@ -142,16 +144,18 @@ export const GameControl = (context) => {
   };
   /* -------------------------Test1 neue Feinde-------------------------------------- */
   const createUfos1 = () => {
-    let ufo1 = {
-      x: 800,
-      y: Math.random() * 500,
-      width: 100,
-      height: 40,
-      src: "/img/ufo4.png",
-      img: new Image(),
-    };
-    ufo1.img.src = ufo1.src;
-    ufos.push(ufo1);
+    if (score > 2000) {
+      let ufo1 = {
+        x: 800,
+        y: Math.random() * 500,
+        width: 100,
+        height: 40,
+        src: "/img/ufo4.png",
+        img: new Image(),
+      };
+      ufo1.img.src = ufo1.src;
+      ufos.push(ufo1);
+    }
   };
   /* -------------------------Test2 neue Feinde-------------------------------------- */
   const createUfos2 = () => {
@@ -292,8 +296,8 @@ export const GameControl = (context) => {
     }
   };
   /* ----------------Laser Shot UPGRADE------------------------------- */
-  /*   const checkForShoot1 = () => {
-    if (KeyStates.Space) {
+  const checkForShoot1 = () => {
+    if (KeyStates.Space && score > 1000) {
       let shot1 = {
         x: rocket.x + 110,
         y: rocket.y + 22,
@@ -307,7 +311,7 @@ export const GameControl = (context) => {
       shots.push(shot1);
       fireEvent("laser1");
     }
-  }; */
+  };
 
   /* -------------------------Gehe zu Commponente 3 ?????-------------------------- */
 
@@ -346,7 +350,7 @@ export const GameControl = (context) => {
     intervals.checkForCollision2 = setInterval(checkForCollision2, 1000 / 25);
     intervals.checkForShoot = setInterval(checkForShoot, 1000 / 10);
     /* ---------------SCHUSS UPGRADE------------------------------------------ */
-    /* intervals.checkForShoot1 = setInterval(checkForShoot1, 1000 / 20); */
+    intervals.checkForShoot1 = setInterval(checkForShoot1, 1000 / 20);
   };
 
   const fireEvent = (event, payload) => {
@@ -362,7 +366,7 @@ export const GameControl = (context) => {
     ufos1 = []; /* feind test */
     ufos2 = []; /* feind test */
     shots = [];
-    /*     shots1 = [];  */
+    shots1 = [];
     loadImages();
     clearIntervals();
     resetScore();
