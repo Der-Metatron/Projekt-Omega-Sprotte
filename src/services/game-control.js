@@ -159,16 +159,18 @@ export const GameControl = (context) => {
   };
   /* -------------------------Test2 neue Feinde-------------------------------------- */
   const createUfos2 = () => {
-    let ufo2 = {
-      x: 800,
-      y: Math.random() * 500,
-      width: 100,
-      height: 40,
-      src: "/img/fighter.png",
-      img: new Image(),
-    };
-    ufo2.img.src = ufo2.src;
-    ufos.push(ufo2);
+    if (score > 4000) {
+      let ufo2 = {
+        x: 800,
+        y: Math.random() * 500,
+        width: 100,
+        height: 40,
+        src: "/img/fighter.png",
+        img: new Image(),
+      };
+      ufo2.img.src = ufo2.src;
+      ufos.push(ufo2);
+    }
   };
   /* ------------------------------------------------------------------------------------- */
   const checkForCollision = () => {
@@ -234,7 +236,7 @@ export const GameControl = (context) => {
           ufo1.hit = true;
           ufo1.img.src = "img/boom3.png";
 
-          increaseScore(10);
+          increaseScore(5);
           setTimeout(() => {
             ufos1 = ufos1.filter((u) => u !== ufo1);
           }, 2000);
@@ -268,7 +270,7 @@ export const GameControl = (context) => {
           ufo2.hit = true;
           ufo2.img.src = "img/boom2.png";
 
-          increaseScore(5);
+          increaseScore(15);
           setTimeout(() => {
             ufos2 = ufos2.filter((u) => u !== ufo2);
           }, 2000);
@@ -297,7 +299,7 @@ export const GameControl = (context) => {
   };
   /* ----------------Laser Shot UPGRADE------------------------------- */
   const checkForShoot1 = () => {
-    if (KeyStates.Space && score > 1000) {
+    if (KeyStates.Space && score > 10000) {
       let shot1 = {
         x: rocket.x + 110,
         y: rocket.y + 22,
