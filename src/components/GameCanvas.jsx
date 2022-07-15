@@ -9,7 +9,7 @@ import boopSfx1 from "../asset/sound/Button1.mp3";
 import boopSfx2 from "../asset/sound/Button.mp3";
 import boopSfx3 from "../asset/sound/Boom.mp3";
 import boopSfx4 from "../asset/sound/Explo.mp3";
-import boopSfx5 from "../asset/sound/Maschingun.mp3";
+/* import boopSfx5 from "../asset/sound/Maschingun.mp3"; */
 import boopSfx6 from "../asset/sound/laser1.mp3";
 
 export const GameCanvas = () => {
@@ -19,7 +19,7 @@ export const GameCanvas = () => {
   const [play2] = useSound(boopSfx2);
   const [play3] = useSound(boopSfx3);
   const [play4] = useSound(boopSfx4);
-  const [play5] = useSound(boopSfx5);
+  /*  const [play5] = useSound(boopSfx5);*/
   const [play6] = useSound(boopSfx6);
   /* -------------SCORE------------------------------------------------ */
 
@@ -51,11 +51,11 @@ export const GameCanvas = () => {
             play3();
           }
           break;
-        /*  case "laser1":
+        case "laser1":
           if (play6) {
             play6();
           }
-          break; */
+          break;
         case "kolision":
           if (play4) {
             play4();
@@ -76,7 +76,7 @@ export const GameCanvas = () => {
       }
     });
     gameControl.current.startGame();
-  }, [play, play3, play4, play5, play6]); /* Sound Commponenten */
+  }, [play, play3, play4, play6]); /* Sound Commponenten */
   /* -------------------Input Punktezähler für Backend------------------------------------------ */
   // eslint-disable-next-line no-unused-vars
   const [nameGamer, setNameGamer] = useState();
@@ -99,7 +99,7 @@ export const GameCanvas = () => {
           autoPlay
           controls
           loop
-          volume={0.5} /* Musik Lautstärke */
+          volume={0.4} /* Musik Lautstärke */
         />
         {/* -------------------Laser Test Button---------------------------------- */}
         {/*   <button onClick={play}>Boop!</button> */}
@@ -124,7 +124,7 @@ export const GameCanvas = () => {
         >
           Stop Game
         </button>
-        {/* -------------------Input Feld ab 1000 Punkte------------------------------------- */}
+        {/* -------------------Input Feld ab 10000 Punkte------------------------------------- */}
         {score > 10000 ? (
           <form className="eintrag" onSubmit={(i) => handleChange(i)}>
             <input
