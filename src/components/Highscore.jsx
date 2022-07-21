@@ -1,11 +1,14 @@
 import React, { useState, useEffect } from "react";
+/* import { GameControl } from "../services/game-control"; */
 import axios from "axios";
 import "./Highscore.css";
 
 export function Highscore() {
-  const [nameGamer, setNameGamer] = useState("");
+  /*   const [nameGamer, setNameGamer] = useState(""); */
   const [highScore, setHighScore] = useState([]);
   const [message, setMessage] = useState(""); /* Quelle der Wahrheit */
+  /*   const gameControl = useRef(null); */
+
   const handleChange = (event) => {
     setMessage(event.target.value);
   };
@@ -14,6 +17,7 @@ export function Highscore() {
     alert(`wurde abgeschickt: ${message}`);
   };
   /* -------------AXIOS---------------------- */
+
   useEffect(() => {
     (async () => {
       try {
@@ -62,6 +66,15 @@ export function Highscore() {
           </div>
         </form>
       </div>
+      {/*  <button
+        className="newgame"
+        onClick={() => {
+           play1(); 
+           gameControl.current.startGame(); 
+        }}
+      >
+        New Game
+      </button> */}
     </>
   );
 }
