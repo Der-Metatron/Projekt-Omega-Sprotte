@@ -1,0 +1,35 @@
+.überschrift {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: underline;
+  font-size: 3rem;
+}
+
+.score {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: aliceblue;
+}
+
+.inputfeld {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #e1a519;
+  color: aqua;
+  text-decoration: dotted;
+}
+
+.input {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hscore {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

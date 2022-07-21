@@ -4,11 +4,10 @@ import { useState } from "react";
 import { GameCanvas } from "./components/GameCanvas";
 import { Welcome } from "./components/Welcome";
 import { Footer } from "./components/Footer";
-/* import { Highscore } from "./components/Highscore"; */
-/* import ReactAudioPlayer from "react-audio-player"; */
+import { Highscore } from "./components/Highscore";
 
 function App() {
-  const [currentPage, setCurrentPage] = useState(0);
+  const [currentPage, setCurrentPage] = useState(1);
   return (
     <div className="App">
       {currentPage === 0 ? (
@@ -21,29 +20,9 @@ function App() {
         </>
       ) : (
         <>
-          {" "}
-          {/* --------------------FORMULAR---------------------------------------------------- */}
-          {/*   <div className="Highscore">
-            <form>
-              <label>
-                Name:
-                <input type="text" name="name" />
-              </label>
-              <input type="submit" value="Absenden" />
-            </form>
-          </div> */}{" "}
-          {/* ----------------------AUDIO IN CANVAS------------------------------------------ */}
-          {/*     <ReactAudioPlayer
-            className="player"
-            src="/audio/Musik/titel 1.mp3"
-            autoPlay
-            controls
-            loop
-            volume={0.4}
-          /> */}
-          <GameCanvas />
-          <Footer />
-          {/*  <Highscore /> */}
+          {/*  <GameCanvas />
+          <Footer /> */}
+          <Highscore />
         </>
       )}
     </div>
