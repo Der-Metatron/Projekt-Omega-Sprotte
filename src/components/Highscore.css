@@ -11,6 +11,16 @@
   align-items: center;
   justify-content: center;
   color: aliceblue;
+  font-family: "Alfa Slab One", cursive;
+
+  font-family: "Atomic Age", cursive;
+
+  font-family: "Aubrey", cursive;
+
+  font-family: "Goldman", cursive;
+
+  font-family: "Orbitron", sans-serif;
+  color: #e1a519;
 }
 
 .inputfeld {
